@@ -23,8 +23,8 @@ const Header = ({ nav }) => {
       </nav>
 
       <div
-        className={`sm:flex w-full flex-row-reverse translate-y-[-10%] opacity-0 transition-all linear duration-500 ${
-          showNavBar ? "opacity-100 translate-y-0" : ""
+        className={`sm:hidden w-full flex-row-reverse translate-y-[-10%] hidden  opacity-0 transition-all linear duration-500 ${
+          showNavBar ? "block opacity-100 translate-y-0" : ""
         }`}
       >
         <div className="sm:flex gap-7 items-center flex-col  hidden w-[25rem] py-7 justify-center bg-color-white dark:bg-color-primary shadow-3xl">
