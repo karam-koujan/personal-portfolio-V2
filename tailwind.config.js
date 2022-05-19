@@ -5,12 +5,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    colors: {
-      "color-primary": "#191a1b",
-      "color-secondary": "#4b6cc1",
-      "color-third": "#ababab",
-      "color-white": "#ffffff"
-    },
     screens: {
       sm: { max: "640px" },
       md: { max: "768px" },
@@ -19,6 +13,12 @@ module.exports = {
       "2xl": { max: "1536px" }
     },
     extend: {
+      colors: {
+        "color-primary": "#191a1b",
+        "color-secondary": "#4b6cc1",
+        "color-third": "#ababab",
+        "color-white": "#ffffff"
+      },
       animation: {
         "fade-in": "fadeIn ease-in 0.4s finite"
       },
