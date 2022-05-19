@@ -3,7 +3,11 @@ import Link from "next/link";
 import Logo from "../../logo/";
 import Toggle from "../../dark-light-mode/themeToggle.tsx";
 import Hamburger from "../../hamburger/";
-const Header = ({ nav }) => {
+
+interface HeaderI {
+  nav: string[];
+}
+const Header = ({ nav }: HeaderI) => {
   const [showNavBar, setShowNavBar] = React.useState(false);
   return (
     <header className="px-[2rem] md:px-[1rem]">
@@ -12,7 +16,7 @@ const Header = ({ nav }) => {
         <div className="flex gap-12 items-center md:gap-7 sm:hidden">
           {nav.map((navItem: string, idx: number) => (
             <Link href={`/#${navItem}`} key={idx}>
-              <a className="text-color-secondary dark:text-color-third font-thin  uppercase text-[0.8rem] tracking-widest relative before:content-[''] after:content-[''] before:w-0  after:w-0 before:h-[6px] after:bg-color-secondary after:absolute after:h-[6px] before:bg-color-secondary before:absolute before:bottom-[-100%] after:bottom-[-100%] before:left-[50%] before:right-[50%] after:left-[50%] after:right-[50%] before:rounded-[20px] after:rounded-[20px] before:transition-all before:ease-in-out before:duration-500  after:transition-all after:ease-in-out after:duration-500  hover:before:w-[100%] hover:after:w-[50%] hover:before:left-0 ">
+              <a className="text-color-secondary dark:text-color-third font-thin  uppercase text-[0.8rem] tracking-widest relative before:content-[''] after:content-[''] before:w-0  after:w-0 before:h-[6px] after:bg-color-secondary after:absolute after:h-[6px] before:bg-color-secondary before:absolute before:bottom-[-100%] after:bottom-[-100%] before:left-[50%] before:right-[50%] after:left-[50%] after:right-[50%] before:rounded-[20px] after:rounded-[20px] before:transition-all before:ease-in-out before:duration-500  after:transition-all after:ease-in-out after:duration-500  hover:before:w-[100%] hover:after:w-[50%] hover:before:left-0  focus:before:w-[100%] focus:after:w-[50%] focus:before:left-0 ">
                 {navItem}
               </a>
             </Link>

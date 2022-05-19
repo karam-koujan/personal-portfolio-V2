@@ -14,7 +14,7 @@ const Introduction = () => {
           />
         </h1>
         <div className={Styles.fadeIn}>
-          <p className={` text-color-primary dark:text-color-third  `}>
+          <p className="text-color-primary dark:text-color-third">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
             maiores nam provident sed qui vel nesciunt aspernatur laboriosam
             magnam, at autem aperiam repudiandae iste ducimus fugiat veritatis
