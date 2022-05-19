@@ -30,7 +30,6 @@ const ImgWrapper = styled.div`
   }
 `;
 const TechList = styled.ul`
-  background-color: transparent;
   display: grid;
   grid-gap: 2rem 1rem;
   grid-template-columns: repeat(3, 1fr);
@@ -40,7 +39,6 @@ const TechList = styled.ul`
   position: relative;
   width: 100%;
   &::before {
-    background-color: var(--blue);
     content: "";
     height: 60%;
     position: absolute;
@@ -52,12 +50,10 @@ const TechList = styled.ul`
 `;
 const TechItem = styled.li`
   align-self: center;
-  color: var(--primary);
   font-weight: 300;
   list-style: none;
   position: relative;
   &::before {
-    background-color: var(--blue);
     content: "";
     height: 5px;
     left: -7%;
@@ -67,8 +63,6 @@ const TechItem = styled.li`
   }
 `;
 const Text = styled.p`
-  color: var(--primary);
-  font-family: Roboto, sans-serif;
   font-size: 1.1rem;
   line-height: 30px;
   margin: 0;

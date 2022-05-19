@@ -26,14 +26,26 @@ const About = ({ about: { text, skills } }: propsI) => {
   });
 
   return (
-    <Section id="about" ref={ref} tabIndex={0}>
+    <Section
+      id="about"
+      className="mx-auto w-full max-w-6xl mt-[7rem]"
+      ref={ref}
+      tabIndex={0}
+    >
       <h1>About Me</h1>
       <Wrapper>
         <TextWrapper isVisible={isVisible}>
-          <Text>{text}</Text>
+          <Text className="text-color-primary dark:text-color-third">
+            {text}
+          </Text>
           <TechList>
             {skills.map((skill, idx) => (
-              <TechItem key={idx}>{skill}</TechItem>
+              <TechItem
+                key={idx}
+                className="text-color-primary dark:text-color-third before:bg-color-secondary"
+              >
+                {skill}
+              </TechItem>
             ))}
           </TechList>
         </TextWrapper>
