@@ -5,18 +5,27 @@ import styles from "../styles/Home.module.css";
 import { parseMdFileToObj } from "../lib/";
 import Layout from "../components/common/layout";
 import Introduction from "../components/introduction";
-const Home: NextPage = ({ nav }) => {
+import About from "../components/about";
+
+interface HomeI {
+  nav: string[];
+  about: any;
+}
+const Home: NextPage = ({ nav, about }: HomeI) => {
   return (
     <Layout nav={nav}>
       <Introduction />
+      <About about={about} />
     </Layout>
   );
 };
 export async function getStaticProps() {
   const navData = await parseMdFileToObj(["content", "nav", "nav.md"]);
+  const aboutData = await parseMdFileToObj(["content", "about", "about.md"]);
   return {
     props: {
-      nav: navData.data.nav
+      nav: navData.data.nav,
+      about: aboutData.data
     }
   };
 }
