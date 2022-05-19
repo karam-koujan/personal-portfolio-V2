@@ -4,7 +4,7 @@ import Styles from "./styles.module.css";
 import Button from "../common/button";
 const Introduction = () => {
   return (
-    <section className="mx-auto w-full max-w-6xl pt-[4rem] pl-[8rem] md:pt-[1rem] sm:pl-[1rem]">
+    <section className="mx-auto w-full max-w-6xl py-[4rem] pl-[8rem] md:pt-[1rem] sm:pl-[1rem]">
       <div>
         <h1 className="mb-[1rem]">
           <Typed
@@ -20,7 +20,7 @@ const Introduction = () => {
             magnam, at autem aperiam repudiandae iste ducimus fugiat veritatis
             hic fuga vero!
           </p>
-          <div className="mt-[1.5rem] w-fit flex gap-7 sm:flex-col sm:m-auto sm:gap-3 sm:mt-[2rem]">
+          <div className="mt-[2rem] translate-x-[-2%] w-fit flex gap-7 sm:translate-x-0 sm:flex-col sm:m-auto sm:gap-3 sm:mt-[2rem]">
             <Link href="">
               <a>
                 <Button>my resume</Button>

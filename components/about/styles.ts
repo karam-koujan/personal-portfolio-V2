@@ -8,9 +8,7 @@ const slideX = keyframes`
     transform:translateX(0%)
    }
 `;
-const Section = styled.section`
-  padding: 4rem 2rem;
-`;
+const Section = styled.section``;
 const ImgWrapper = styled.div`
   max-width: 300px;
   transform: translateX(1000%);
@@ -32,7 +30,6 @@ const ImgWrapper = styled.div`
 const TechList = styled.ul`
   display: grid;
   grid-gap: 2rem 1rem;
-  grid-template-columns: repeat(3, 1fr);
   margin: 3rem 0;
   max-width: 700px;
   padding: 1rem 0 1rem 2.5rem;
@@ -69,7 +66,6 @@ const Text = styled.p`
 `;
 const TextWrapper = styled.div`
   self-align: center;
-  width: 50%;
   opacity: 0;
   transform: translateY(50%);
   ${({ isVisible }: componentI) =>

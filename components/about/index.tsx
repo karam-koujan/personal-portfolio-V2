@@ -1,7 +1,7 @@
 import Image from "next/image";
 import profileImg from "../../public/assets/images/profileImg.jpg";
 import { useOnScreen } from "../../hooks/";
-//import {Bullet,Title} from "../../../templates/";
+import { Bullet, Title } from "../../templates/title";
 import {
   Section,
   ImgWrapper,
@@ -22,42 +22,55 @@ interface propsI {
 const About = ({ about: { text, skills } }: propsI) => {
   const [isVisible, ref] = useOnScreen({
     rootMargin: "0px 0px 0px 0px",
-    threshold: 0.3
+    threshold: 0.5
   });
 
   return (
     <Section
       id="about"
-      className="mx-auto w-full max-w-6xl mt-[7rem]"
+      className="px-[2rem] md:px-[1rem] pt-[4.5rem]  "
       ref={ref}
       tabIndex={0}
     >
-      <h1>About Me</h1>
-      <Wrapper>
-        <TextWrapper isVisible={isVisible}>
-          <Text className="text-color-primary dark:text-color-third">
-            {text}
-          </Text>
-          <TechList>
-            {skills.map((skill, idx) => (
-              <TechItem
-                key={idx}
-                className="text-color-primary dark:text-color-third before:bg-color-secondary"
-              >
-                {skill}
-              </TechItem>
-            ))}
-          </TechList>
-        </TextWrapper>
-        <ImgWrapper isVisible={isVisible}>
-          <Image
-            src={profileImg}
-            layout="responsive"
-            placeholder="blur"
-            alt="my image"
-          />
-        </ImgWrapper>
-      </Wrapper>
+      <div className="mx-auto w-full max-w-6xl">
+        <Title
+          isVisible={isVisible}
+          className="text-color-primary font-bold mb-[1rem] dark:text-color-secondary"
+        >
+          About Me
+          <Bullet
+            style={{ "--size": "4.5rem" }}
+            className="text-color-secondary dark:text-color-third"
+          >
+            .
+          </Bullet>
+        </Title>
+        <Wrapper className="md:flex-col md:items-center ">
+          <TextWrapper isVisible={isVisible} className="w-[50%] md:w-full">
+            <Text className="text-color-primary dark:text-color-third">
+              {text}
+            </Text>
+            <TechList className="before:bg-color-secondary grid-cols-[repeat(3,1fr)]  md:grid-[1rem] sm:grid-cols-[repeat(2,1fr)]">
+              {skills.map((skill, idx) => (
+                <TechItem
+                  key={idx}
+                  className="text-color-primary dark:text-color-third before:bg-color-secondary"
+                >
+                  {skill}
+                </TechItem>
+              ))}
+            </TechList>
+          </TextWrapper>
+          <ImgWrapper isVisible={isVisible}>
+            <Image
+              src={profileImg}
+              layout="responsive"
+              placeholder="blur"
+              alt="my image"
+            />
+          </ImgWrapper>
+        </Wrapper>
+      </div>
     </Section>
   );
 };
