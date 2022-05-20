@@ -4,7 +4,7 @@ import Styles from "./styles.module.css";
 import Button from "../common/button";
 const Introduction = () => {
   return (
-    <section className="mx-auto w-full max-w-6xl py-[4.5rem] pl-[8rem] md:pt-[1rem] sm:pl-[1rem]">
+    <section className="mx-auto w-full max-w-6xl pt-[4.5rem] pl-[8rem] md:pt-[1rem] sm:pl-[1rem]">
       <div>
         <h1 className="mb-[1rem]">
           <Typed
