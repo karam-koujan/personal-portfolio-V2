@@ -29,11 +29,12 @@ interface propsI {
 
 const Projects = ({ projects }: propsI) => {
   const [selectedProject, setSelectedProject] = React.useState({});
+  const handleRemoveSelectedProject = () => setSelectedProject({});
   const handleSelectProject = (data: projectI) => () =>
     setSelectedProject(data);
   const [isVisible, ref] = useOnScreen({
     rootMargin: "0px 0px 0px 0px",
-    threshold: 0.1
+    threshold: 0.3
   });
   return (
     <Section
@@ -72,7 +73,10 @@ const Projects = ({ projects }: propsI) => {
         </Wrapper>
       </div>
       {Object.keys(selectedProject).length ? (
-        <Project {...selectedProject} />
+        <Project
+          {...selectedProject}
+          handleRemoveSelectedProject={handleRemoveSelectedProject}
+        />
       ) : null}
     </Section>
   );
