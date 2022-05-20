@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { useEffect } from "react";
+import Styles from "./styles.module.css";
 interface projectI {
   title: string;
   image: string;
   text: string;
   placeholder: string;
+  embedLink: string;
   link: string;
   techs: string[];
 }
@@ -11,21 +14,26 @@ const Project = ({
   title,
   text,
   image,
-  link,
+  embedLink,
   placeholder,
   techs
 }: projectI) => {
+  useEffect(() => {
+    window.document.body.style.overflowY = "hidden";
+  }, []);
   return (
-    <div className="flex justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-color-primary">
-      <div className="bg-color-white py-[1rem] rounded-[2px]">
-        <h3 className="text-color-primary pb-[1rem] font-bold text-[1.4rem] text-center">
+    <div className="flex justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.65)]">
+      <div className="bg-color-white py-[1rem] rounded-[2px] max-h-[97vh] overflow-y-auto ">
+        <h3
+          className={`text-color-primary pb-[1rem] font-bold text-[1.4rem] text-center ${Styles["no-scrollbar"]}`}
+        >
           {title}
         </h3>
-        {link ? (
+        {embedLink ? (
           <iframe
             className="w-full"
             height="315"
-            src={"https://www.youtube.com/embed/TWHMeKpaNpE"}
+            src={embedLink}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -55,6 +63,36 @@ const Project = ({
           ))}
         </div>
       </div>
+      <svg
+        className="absolute right-[1rem] top-[1rem]"
+        aria-label="Fermer"
+        color="#ffffff"
+        fill="#ffffff"
+        height="24"
+        role="img"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polyline
+          fill="none"
+          points="20.643 3.357 12 12 3.353 20.647"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+        ></polyline>
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+          x1="20.649"
+          x2="3.354"
+          y1="20.649"
+          y2="3.354"
+        ></line>
+      </svg>
     </div>
   );
 };

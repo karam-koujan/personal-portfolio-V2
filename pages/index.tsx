@@ -11,6 +11,7 @@ interface projectI {
   placeholder: string;
   link: string;
   techs: string[];
+  embedLink: string;
 }
 interface propsI {
   nav: string[];

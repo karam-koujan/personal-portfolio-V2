@@ -7,7 +7,7 @@ projects:
       text: "a social media app built with mern stack",
       placeholder: "#262626",
       link: "https://youtu.be/TWHMeKpaNpE",
-      embedLink: "https://www.youtube.com/embed/TWHMeKpaNpE"
+      embedLink: "https://www.youtube.com/embed/TWHMeKpaNpE",
       techs:
         ["MongoDb", "Express", "React.js", "Styled-components", "React-query"],
     },
@@ -26,6 +26,7 @@ projects:
       image: "/assets/images/portfolio.jpg",
       link: "/",
       text: "my personal website built with Next Js",
+      embedLink: "",
       placeholder: "#191a1d",
       techs:
         ["MongoDb", "Express", "React.js", "Styled-components", "React-query"],
@@ -34,9 +35,10 @@ projects:
       title: ecommerce app,
       image: "/assets/images/ecommerce.jpg",
       link: "https://ecommerce-766du20bt-karam-koujan.vercel.app/",
+      embedLink: "",
       text: "an ecommerce app built with Next.js and Stripe.js",
       placeholder: "#F7444E",
-      techs: ["Next.js", "React.js", "Stripe.js"],
+      techs: ["TypeScript", "Next.js", "React.js", "Stripe.js"],
     },
   ]
 ---
