@@ -31,30 +31,37 @@ const Projects = ({ projects }: propsI) => {
     threshold: 0.1
   });
   return (
-    <Section id="projects" ref={ref} tabIndex="0">
-      <Title isVisible={isVisible}>Experemental Projects</Title>
-      <Wrapper isVisible={isVisible}>
-        {projects.map(({ title, text, image, link, placeholder }, idx) => (
-          <Project key={idx} tabIndex={0}>
-            <Link href={link}>
-              <a>
-                <ProjectTitle>{title}</ProjectTitle>
-                <ProjectImg placeholderColor={placeholder}>
-                  <Image
-                    layout="responsive"
-                    className="object-cover	 object-center"
-                    height={70}
-                    width={100}
-                    src={image}
-                    alt={`${title} image`}
-                  />
-                </ProjectImg>
-                <Text>{text}</Text>
-              </a>
-            </Link>
-          </Project>
-        ))}
-      </Wrapper>
+    <Section
+      id="projects"
+      className="px-[2rem] md:px-[1rem] pt-[4.5rem]"
+      ref={ref}
+      tabIndex={0}
+    >
+      <div className="mx-auto w-full max-w-6xl">
+        <Title isVisible={isVisible}>Experemental Projects</Title>
+        <Wrapper isVisible={isVisible}>
+          {projects.map(({ title, text, image, link, placeholder }, idx) => (
+            <Project key={idx} tabIndex={0}>
+              <Link href={link}>
+                <a>
+                  <ProjectTitle>{title}</ProjectTitle>
+                  <ProjectImg placeholderColor={placeholder}>
+                    <Image
+                      layout="responsive"
+                      className="object-cover	 object-center"
+                      height={70}
+                      width={100}
+                      src={image}
+                      alt={`${title} image`}
+                    />
+                  </ProjectImg>
+                  <Text>{text}</Text>
+                </a>
+              </Link>
+            </Project>
+          ))}
+        </Wrapper>
+      </div>
     </Section>
   );
 };

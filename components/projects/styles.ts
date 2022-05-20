@@ -36,9 +36,7 @@ const ProjectTitle = styled.h3`
   padding: 1rem;
   text-transform: capitalize;
 `;
-const Section = styled.section`
-  padding: 4rem 2rem;
-`;
+const Section = styled.section``;
 const TechList = styled.ul`
   align-items: center;
   display: flex;
@@ -65,10 +63,9 @@ const Text = styled.p`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-gap: 5%;
-  grid-template-columns: repeat(auto-fit, minmax(25%, 200px));
+  grid-gap: 2%;
+  grid-template-columns: repeat(auto-fit, minmax(23%, 200px));
   opacity: 0;
-  padding: 4rem 0;
   transform: translateY(20%);
   ${({ isVisible }: { isVisible: boolean }) =>
     isVisible
