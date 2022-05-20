@@ -17,11 +17,13 @@ const Project = ({
 }: projectI) => {
   return (
     <div className="flex justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-color-primary">
-      <div>
-        <h3>{title}</h3>
+      <div className="bg-color-white py-[1rem] rounded-[2px]">
+        <h3 className="text-color-primary pb-[1rem] font-bold text-[1.4rem] text-center">
+          {title}
+        </h3>
         {link ? (
           <iframe
-            width="560"
+            className="w-full"
             height="315"
             src={"https://www.youtube.com/embed/TWHMeKpaNpE"}
             title="YouTube video player"
@@ -39,10 +41,19 @@ const Project = ({
             alt={`${title} image`}
           />
         )}
-        <p>{text}</p>
-        {techs.map((tech, idx) => (
-          <div key={idx}>{tech}</div>
-        ))}
+        <p className="text-color-primary pl-[1rem] py-[1rem]">{text}</p>
+        <div className="flex gap-4 px-[1rem]">
+          {techs.map((tech, idx) => (
+            <div
+              key={idx}
+              className="bg-color-secondary py-[.5rem] px-[1rem] rounded-[50px]"
+            >
+              <p className="text-color-white text-center text-[.8rem]">
+                {tech}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
