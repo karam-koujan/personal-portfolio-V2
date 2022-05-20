@@ -17,12 +17,12 @@ const Toggle = () => {
       {theme === "dark" ? (
         <FaSun
           onClick={handleTheme(theme)}
-          className="text-color-white dark:text-color-third text-2xl cursor-pointer"
+          className="text-color-white dark:text-color-white text-2xl cursor-pointer"
         />
       ) : (
         <FaMoon
           onClick={handleTheme(theme)}
-          className="text-color-secondary dark:text-color-primary text-2xl cursor-pointer"
+          className="text-color-secondary dark:text-color-white text-2xl cursor-pointer"
         />
       )}
     </div>

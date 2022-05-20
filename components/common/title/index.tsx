@@ -10,12 +10,12 @@ const Title = ({ children, isVisible, ...props }: propsI) => {
   return (
     <Wrapper
       isVisible={isVisible}
-      className="text-color-primary font-bold mb-[1rem] dark:text-color-secondary"
+      className="text-color-primary font-bold mb-[1.5rem]  dark:text-color-secondary"
     >
       {children}
       <Bullet
         style={{ "--size": "4.5rem" }}
-        className="text-color-secondary dark:text-color-third"
+        className="text-color-secondary dark:text-color-white"
       >
         .
       </Bullet>

@@ -28,7 +28,7 @@ const About = ({ about: { text, skills } }: propsI) => {
   return (
     <Section
       id="about"
-      className="px-[2rem] md:px-[1rem] pt-[4.5rem]  "
+      className="px-[2rem] md:px-[1rem] pt-[5rem]  "
       ref={ref}
       tabIndex={0}
     >
@@ -36,14 +36,14 @@ const About = ({ about: { text, skills } }: propsI) => {
         <Title isVisible={isVisible}>About Me</Title>
         <Wrapper className="md:flex-col md:items-center ">
           <TextWrapper isVisible={isVisible} className="w-[50%] md:w-full">
-            <Text className="text-color-primary dark:text-color-third">
+            <Text className="text-color-primary dark:text-color-white">
               {text}
             </Text>
             <TechList className="before:bg-color-secondary grid-cols-[repeat(3,1fr)]  md:grid-[1rem] sm:grid-cols-[repeat(2,1fr)]">
               {skills.map((skill, idx) => (
                 <TechItem
                   key={idx}
-                  className="text-color-primary dark:text-color-third before:bg-color-secondary"
+                  className="text-color-primary dark:text-color-white before:bg-color-secondary"
                 >
                   {skill}
                 </TechItem>

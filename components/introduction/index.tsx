@@ -4,7 +4,7 @@ import Styles from "./styles.module.css";
 import Button from "../common/button";
 const Introduction = () => {
   return (
-    <section className="mx-auto w-full max-w-6xl pt-[4.5rem] pl-[8rem] md:pt-[1rem] sm:pl-[1rem]">
+    <section className="mx-auto w-full max-w-6xl pt-[5rem] pl-[8rem] md:pt-[1rem] sm:pl-[1rem]">
       <div>
         <h1 className="mb-[1rem]">
           <Typed
@@ -14,7 +14,7 @@ const Introduction = () => {
           />
         </h1>
         <div className={Styles.fadeIn}>
-          <p className="text-color-primary dark:text-color-third">
+          <p className="text-color-primary dark:text-color-white">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
             maiores nam provident sed qui vel nesciunt aspernatur laboriosam
             magnam, at autem aperiam repudiandae iste ducimus fugiat veritatis

@@ -38,13 +38,15 @@ const Projects = ({ projects }: propsI) => {
       tabIndex={0}
     >
       <div className="mx-auto w-full max-w-6xl">
-        <Title isVisible={isVisible}>Experemental Projects</Title>
+        <Title isVisible={isVisible}>Experimental Projects</Title>
         <Wrapper isVisible={isVisible}>
           {projects.map(({ title, text, image, link, placeholder }, idx) => (
             <Project key={idx} tabIndex={0}>
               <Link href={link}>
                 <a>
-                  <ProjectTitle>{title}</ProjectTitle>
+                  <ProjectTitle className="text-color-primary dark:text-color-white">
+                    {title}
+                  </ProjectTitle>
                   <ProjectImg placeholderColor={placeholder}>
                     <Image
                       layout="responsive"
@@ -55,7 +57,9 @@ const Projects = ({ projects }: propsI) => {
                       alt={`${title} image`}
                     />
                   </ProjectImg>
-                  <Text>{text}</Text>
+                  <Text className="text-color-primary dark:text-color-white">
+                    {text}
+                  </Text>
                 </a>
               </Link>
             </Project>
