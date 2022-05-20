@@ -1,8 +1,10 @@
+import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useOnScreen } from "../../hooks/";
+import Project from "./project.tsx";
 import {
-  Project,
+  Project as ProjectWrapper,
   ProjectImg,
   ProjectLink,
   ProjectTitle,
@@ -26,6 +28,9 @@ interface propsI {
 }
 
 const Projects = ({ projects }: propsI) => {
+  const [selectedProject, setSelectedProject] = React.useState({});
+  const handleSelectProject = (data: projectI) => () =>
+    setSelectedProject(data);
   const [isVisible, ref] = useOnScreen({
     rootMargin: "0px 0px 0px 0px",
     threshold: 0.1
@@ -40,32 +45,35 @@ const Projects = ({ projects }: propsI) => {
       <div className="mx-auto w-full max-w-6xl">
         <Title isVisible={isVisible}>Experimental Projects</Title>
         <Wrapper isVisible={isVisible}>
-          {projects.map(({ title, text, image, link, placeholder }, idx) => (
-            <Project key={idx} tabIndex={0}>
-              <Link href={link}>
-                <a>
-                  <ProjectTitle className="text-color-primary dark:text-color-white">
-                    {title}
-                  </ProjectTitle>
-                  <ProjectImg placeholderColor={placeholder}>
-                    <Image
-                      layout="responsive"
-                      className="object-cover	 object-center"
-                      height={70}
-                      width={100}
-                      src={image}
-                      alt={`${title} image`}
-                    />
-                  </ProjectImg>
-                  <Text className="text-color-primary dark:text-color-white">
-                    {text}
-                  </Text>
-                </a>
-              </Link>
-            </Project>
+          {projects.map((projectData, idx) => (
+            <ProjectWrapper
+              key={idx}
+              tabIndex={0}
+              onClick={handleSelectProject(projectData)}
+            >
+              <ProjectTitle className="text-color-primary dark:text-color-white">
+                {projectData.title}
+              </ProjectTitle>
+              <ProjectImg placeholderColor={projectData.placeholder}>
+                <Image
+                  layout="responsive"
+                  className="object-cover	 object-center"
+                  height={70}
+                  width={100}
+                  src={projectData.image}
+                  alt={`${projectData.title} image`}
+                />
+              </ProjectImg>
+              <Text className="text-color-primary dark:text-color-white">
+                {projectData.text}
+              </Text>
+            </ProjectWrapper>
           ))}
         </Wrapper>
       </div>
+      {Object.keys(selectedProject).length ? (
+        <Project {...selectedProject} />
+      ) : null}
     </Section>
   );
 };
