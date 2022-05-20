@@ -14,6 +14,7 @@ import Title from "../common/title";
 interface projectI {
   title: string;
   image: string;
+  repo: string;
   text: string;
   placeholder: string;
   link: string;

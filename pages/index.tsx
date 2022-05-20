@@ -12,6 +12,7 @@ interface projectI {
   link: string;
   techs: string[];
   embedLink: string;
+  repo: string;
 }
 interface propsI {
   nav: string[];
