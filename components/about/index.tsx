@@ -1,7 +1,7 @@
 import Image from "next/image";
 import profileImg from "../../public/assets/images/profileImg.jpg";
 import { useOnScreen } from "../../hooks/";
-import { Bullet, Title } from "../../templates/title";
+import Title from "../common/title/";
 import {
   Section,
   ImgWrapper,
@@ -33,18 +33,7 @@ const About = ({ about: { text, skills } }: propsI) => {
       tabIndex={0}
     >
       <div className="mx-auto w-full max-w-6xl">
-        <Title
-          isVisible={isVisible}
-          className="text-color-primary font-bold mb-[1rem] dark:text-color-secondary"
-        >
-          About Me
-          <Bullet
-            style={{ "--size": "4.5rem" }}
-            className="text-color-secondary dark:text-color-third"
-          >
-            .
-          </Bullet>
-        </Title>
+        <Title isVisible={isVisible}>About Me</Title>
         <Wrapper className="md:flex-col md:items-center ">
           <TextWrapper isVisible={isVisible} className="w-[50%] md:w-full">
             <Text className="text-color-primary dark:text-color-third">
