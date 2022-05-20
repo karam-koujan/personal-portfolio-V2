@@ -20,7 +20,7 @@ const Introduction = () => {
             magnam, at autem aperiam repudiandae iste ducimus fugiat veritatis
             hic fuga vero!
           </p>
-          <div className="mt-[2rem] translate-x-[-2%] w-fit flex gap-7 sm:translate-x-0 sm:flex-col sm:m-auto sm:gap-3 sm:mt-[2rem]">
+          <div className="mt-[2rem] translate-x-[-2%] w-fit flex gap-7 sm:translate-x-0 sm:flex-col sm:items-center sm:m-auto sm:gap-3 sm:mt-[2rem]">
             <Link href="">
               <a>
                 <Button>my resume</Button>

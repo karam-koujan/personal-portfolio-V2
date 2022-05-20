@@ -26,15 +26,15 @@ const Header = ({ nav }: HeaderI) => {
         <Hamburger showNavBar={showNavBar} setShowNavBar={setShowNavBar} />
       </nav>
 
-      <div
-        className={`sm:hidden w-full flex-row-reverse translate-y-[-10%] hidden  opacity-0 transition-all linear duration-500 ${
-          showNavBar ? "block opacity-100 translate-y-0" : ""
-        }`}
-      >
-        <div className="sm:flex gap-7 items-center flex-col  hidden w-[25rem] py-7 justify-center bg-color-white dark:bg-color-primary shadow-3xl">
+      <div className={` height-0 bg-color-primary relative z-10 `}>
+        <div
+          className={`hidden opacity-0 max-h-[0]  translate-y-[-10%]  transition-all linear duration-500   absolute right-[0]  sm:flex gap-7 items-center flex-col   w-[25rem] py-7 justify-center bg-color-white dark:bg-color-primary shadow-3xl  ${
+            showNavBar ? "max-h-[999px] opacity-100 translate-y-0" : ""
+          }`}
+        >
           {nav.map((navItem: string, idx: number) => (
             <Link href={`/#${navItem}`} key={idx}>
-              <a className="text-color-secondary dark:text-color-third font-thin  uppercase text-[0.8rem] tracking-widest relative before:content-[''] after:content-[''] before:w-0  after:w-0 before:h-[6px] after:bg-color-secondary after:absolute after:h-[6px] before:bg-color-secondary before:absolute before:bottom-[-100%] after:bottom-[-100%] before:left-[50%] before:right-[50%] after:left-[50%] after:right-[50%] before:rounded-[20px] after:rounded-[20px] before:transition-all before:ease-in-out before:duration-500  after:transition-all after:ease-in-out after:duration-500  hover:before:w-[100%] hover:after:w-[50%] hover:before:left-0 ">
+              <a className="text-color-secondary dark:text-color-third font-thin  uppercase text-[0.8rem] tracking-widest relative transition linear duration-500 hover:text-color-primary focus:text-color-primary dark:hover:text-color-secondary dark:focus:text-color-secondary ">
                 {navItem}
               </a>
             </Link>
