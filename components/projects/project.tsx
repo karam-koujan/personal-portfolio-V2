@@ -33,11 +33,11 @@ const Project = ({
   return (
     <div className="flex justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.65)]">
       <div
-        className="bg-color-white py-[1rem] rounded-[2px] max-h-[97vh] overflow-y-auto "
+        className="bg-color-white dark:bg-color-primary py-[1rem] rounded-[2px] max-h-[97vh] overflow-y-auto "
         tabIndex={0}
       >
         <h3
-          className={`text-color-primary pb-[1rem] font-bold text-[1.4rem] text-center ${Styles["no-scrollbar"]}`}
+          className={`text-color-primary dark:text-color-white pb-[1rem] font-bold text-[1.4rem] text-center ${Styles["no-scrollbar"]}`}
         >
           {title}
         </h3>
@@ -61,12 +61,14 @@ const Project = ({
             alt={`${title} image`}
           />
         )}
-        <p className="text-color-primary pl-[1rem] py-[1rem]">{text}</p>
+        <p className="text-color-primary dark:text-color-white pl-[1rem] py-[1rem]">
+          {text}
+        </p>
         <div className="flex gap-4 px-[1rem]">
           {techs.map((tech, idx) => (
             <div
               key={idx}
-              className="bg-color-secondary py-[.5rem] px-[1rem] rounded-[50px]"
+              className="bg-color-secondary  py-[.5rem] px-[1rem] rounded-[50px]"
             >
               <p className="text-color-white text-center text-[.8rem]">
                 {tech}
@@ -79,7 +81,7 @@ const Project = ({
             <Link href={link} target={link}>
               <a>
                 <svg
-                  className="w-[25px] fill-color-primary block"
+                  className="w-[25px] fill-color-primary dark:fill-color-white block"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 194.818 194.818"
                 >
@@ -93,7 +95,7 @@ const Project = ({
             <Link href="">
               <a>
                 <svg
-                  className="w-[25px] fill-color-primary block cursor-pointer"
+                  className="w-[25px] fill-color-primary dark:fill-color-white block cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 18 18"
                 >
