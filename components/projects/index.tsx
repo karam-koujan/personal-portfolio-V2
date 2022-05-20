@@ -25,7 +25,7 @@ interface propsI {
   projects: projectI[];
 }
 
-const Projects = (projects: propsI) => {
+const Projects = ({ projects }: propsI) => {
   const [isVisible, ref] = useOnScreen({
     rootMargin: "0px 0px 0px 0px",
     threshold: 0.1

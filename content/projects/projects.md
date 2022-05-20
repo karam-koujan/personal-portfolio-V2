@@ -11,10 +11,10 @@ projects:
         ["MongoDb", "Express", "React.js", "Styled-components", "React-query"],
     },
     {
-      title: local freelancers,
+      title: Freelancers Reviews Maps,
       image: "/assets/images/sideProject.jpg",
       link: "https://youtu.be/-95L9Hi-NQw",
-      text: "find talented people closer to your current location",
+      text: "Find talented freelancers nearby you ",
       placeholder: "#19BD33",
       techs:
         ["MongoDb", "Express", "React.js", "Styled-components", "React-query"],
@@ -31,8 +31,9 @@ projects:
     {
       title: ecommerce app,
       image: "/assets/images/ecommerce.jpg",
-      link:"https://ecommerce-766du20bt-karam-koujan.vercel.app/",
-      placeholder:"#F7444E",
+      link: "https://ecommerce-766du20bt-karam-koujan.vercel.app/",
+      text: "an ecommerce app built with Next.js and Stripe.js",
+      placeholder: "#F7444E",
       techs: ["Next.js", "React.js", "Stripe.js"],
     },
   ]

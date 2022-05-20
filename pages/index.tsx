@@ -39,7 +39,6 @@ export async function getStaticProps() {
     "projects",
     "projects.md"
   ]);
-  console.log(projectsData.data.projects);
   return {
     props: {
       nav: navData.data.nav,
