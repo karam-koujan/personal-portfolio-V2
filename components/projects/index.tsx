@@ -1,16 +1,12 @@
 import * as React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { useOnScreen } from "../../hooks/";
 import Project from "./project.tsx";
 import {
   Project as ProjectWrapper,
   ProjectImg,
-  ProjectLink,
   ProjectTitle,
   Section,
-  TechItem,
-  TechList,
   Text,
   Wrapper
 } from "./styles";
