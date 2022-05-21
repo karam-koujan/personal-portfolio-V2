@@ -42,61 +42,76 @@ const Articles = ({ articles, blogLink }: propsI) => {
   });
 
   return (
-    <Section ref={ref}>
-      <Title isVisible={isVisible}>Articles</Title>
-      <ArticleWrapper isVisible={isVisible}>
-        {articles.map(
-          (
-            {
-              title,
-              image,
-              placeholder,
-              introduction,
-              tags,
-              date,
-              link,
-              duration
-            },
-            idx
-          ) => (
-            <Wrapper key={idx}>
-              <Link href={link}>
-                <a target={link}>
-                  <ArticleImg placeholderColor={placeholder}>
-                    <Image
-                      layout="responsive"
-                      height={60}
-                      width={100}
-                      src={image}
-                      alt={`${title} image`}
-                    />
-                  </ArticleImg>
-                  <TextWrapper>
-                    <ArticleTitle>{title}</ArticleTitle>
-                    <ArticleText>{introduction}</ArticleText>
-                    <ArticleMetaData>
-                      <TagWrapper>
-                        {tags.map((tag, idx) => (
-                          <Tag key={idx}>{tag}</Tag>
-                        ))}
-                      </TagWrapper>
-                      <Date>{date}</Date>
-                      <Duration>{duration}</Duration>
-                    </ArticleMetaData>
-                  </TextWrapper>
-                </a>
-              </Link>
-            </Wrapper>
-          )
-        )}
-      </ArticleWrapper>
-      {articles.length > 3 ? (
-        <BtnWrapper>
-          <Btn href={blogLink} target={blogLink}>
-            see more
-          </Btn>
-        </BtnWrapper>
-      ) : null}
+    <Section ref={ref} className="px-[2rem] md:px-[1rem] pt-[4.5rem]">
+      <div className="mx-auto w-full max-w-6xl">
+        <Title isVisible={isVisible}>Articles</Title>
+        <ArticleWrapper isVisible={isVisible}>
+          {articles.map(
+            (
+              {
+                title,
+                image,
+                placeholder,
+                introduction,
+                tags,
+                date,
+                link,
+                duration
+              },
+              idx
+            ) => (
+              <Wrapper key={idx}>
+                <Link href={link}>
+                  <a target={link}>
+                    <ArticleImg placeholderColor={placeholder}>
+                      <Image
+                        layout="responsive"
+                        height={60}
+                        width={100}
+                        src={image}
+                        alt={`${title} image`}
+                      />
+                    </ArticleImg>
+                    <TextWrapper>
+                      <ArticleTitle className="text-color-primary dark:text-color-white my-[1rem] font-bold">
+                        {title}
+                      </ArticleTitle>
+                      <ArticleText className="text-color-primary dark:text-color-white my-[1rem]">
+                        {introduction}
+                      </ArticleText>
+                      <ArticleMetaData>
+                        <TagWrapper>
+                          {tags.map((tag, idx) => (
+                            <Tag
+                              key={idx}
+                              className="bg-color-secondary text-color-white"
+                            >
+                              {tag}
+                            </Tag>
+                          ))}
+                        </TagWrapper>
+                        <Date className="text-color-primary dark:text-color-white">
+                          {date}
+                        </Date>
+                        <Duration className="text-color-primary dark:text-color-white">
+                          {duration}
+                        </Duration>
+                      </ArticleMetaData>
+                    </TextWrapper>
+                  </a>
+                </Link>
+              </Wrapper>
+            )
+          )}
+        </ArticleWrapper>
+        {articles.length > 3 ? (
+          <BtnWrapper>
+            <Btn href={blogLink} target={blogLink}>
+              see more
+            </Btn>
+          </BtnWrapper>
+        ) : null}
+      </div>
     </Section>
   );
 };
