@@ -40,7 +40,7 @@ const ArticleWrapper = styled.div`
   grid-gap: 5%;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   opacity: 0;
-  padding: 1rem 0 4rem 0;
+  padding: 1rem 0 0rem 0;
   transform: translateY(20%);
   ${({ isVisible }: { isVisible: string }) =>
     isVisible

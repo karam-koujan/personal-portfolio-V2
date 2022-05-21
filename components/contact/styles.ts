@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-
+import { fadeInUp } from "../../styles/animation";
 const Send = styled.button`
   align-self: center;
   font-size: 1rem;
@@ -19,6 +19,16 @@ const Error = styled.span`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  ${({ isVisible }: { isVisible: string }) =>
+    isVisible
+      ? css`
+          animation-delay: 1s;
+          animation-duration: 0.6s;
+          animation-fill-mode: forwards;
+          animation-name: ${fadeInUp};
+          animation-timing-function: ease;
+        `
+      : null}
 `;
 const Label = styled.label``;
 const Section = styled.section``;

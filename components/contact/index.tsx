@@ -14,6 +14,7 @@ import {
 } from "./styles";
 import { useOnScreen } from "../../hooks/";
 import Title from "../common/title";
+import Button from "../common/button";
 interface contactSourceI {
   link: string;
   text: string;
@@ -70,21 +71,29 @@ const Contact = ({
   });
   return (
     <Section className="px-[2rem] md:px-[1rem] pt-[4.5rem]">
-      <Title isVisible={isVisible}>Contact Me</Title>
       <div className="mx-auto w-full max-w-6xl">
+        <Title isVisible={isVisible} ref={ref}>
+          Contact Me
+        </Title>
         <Wrapper
+          isVisible={isVisible}
+          ref={ref}
           action="https://formsubmit.co/455e550f85f6a23e8191f90a4df86f42"
           method="POST"
           onSubmit={handleSubmit}
         >
-          <Strong>
+          <Strong className="text-color-primary dark:text-color-white">
             Feel free to email me via{" "}
-            <Email href={link} target={link}>
+            <Email href={link} target={link} className="text-color-secondary">
               {email}
             </Email>
           </Strong>
-          <Text>Or fill the contact form down bellow</Text>
-          <Label>Full name:</Label>
+          <Text className="text-color-primary dark:text-color-white">
+            Or fill the contact form down bellow.
+          </Text>
+          <Label className="text-color-primary dark:text-color-white">
+            Full name:
+          </Label>
           <Input
             type="text"
             name="fullName"
@@ -93,12 +102,15 @@ const Contact = ({
             onBlur={handleBlur}
             onChange={handleChange}
             value={values.fullName}
+            className="text-color-primary bg-transparent dark:text-color-white border-[1px] border-solid  border-color-secondary"
             required
           />
           {errors.fullName && touched.fullName ? (
             <Error>{errors.fullName}</Error>
           ) : null}
-          <Label>Your Email:</Label>
+          <Label className="text-color-primary dark:text-color-white">
+            Your Email:
+          </Label>
           <Input
             type="email"
             name="email"
@@ -107,10 +119,13 @@ const Contact = ({
             onBlur={handleBlur}
             onChange={handleChange}
             value={values.email}
+            className="text-color-primary bg-transparent dark:text-color-white border-[1px] border-solid  border-color-secondary"
             required
           />
           {errors.email && touched.email ? <Error>{errors.email}</Error> : null}
-          <Label>Message:</Label>
+          <Label className="text-color-primary dark:text-color-white">
+            Message:
+          </Label>
           <TextArea
             name="message"
             error={errors.message && touched.message}
@@ -118,14 +133,19 @@ const Contact = ({
             onBlur={handleBlur}
             onChange={handleChange}
             value={values.message}
+            className="text-color-primary bg-transparent dark:text-color-white border-[1px] border-solid  border-color-secondary"
             required
           />
           {errors.message && touched.message ? (
             <Error>{errors.message}</Error>
           ) : null}
-          <Send type="submit" onClick={handleSubmit}>
+          <Button
+            className="self-center font-[1rem] py-[.5rem] px-[3rem]"
+            type="submit"
+            onClick={handleSubmit}
+          >
             send
-          </Send>
+          </Button>
         </Wrapper>
       </div>
     </Section>
