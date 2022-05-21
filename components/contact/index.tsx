@@ -71,7 +71,7 @@ const Contact = ({
   });
   return (
     <Section className="px-[2rem] md:px-[1rem] pt-[4.5rem]" id="#contact">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-6xl ">
         <Title isVisible={isVisible} ref={ref}>
           Contact Me
         </Title>
@@ -141,7 +141,7 @@ const Contact = ({
             <Error>{errors.message}</Error>
           ) : null}
           <Button
-            className="self-center font-[1rem] py-[.5rem] "
+            className="self-center ] "
             type="submit"
             onClick={handleSubmit}
           >
