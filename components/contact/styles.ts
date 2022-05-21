@@ -19,6 +19,8 @@ const Error = styled.span`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(20%);
   ${({ isVisible }: { isVisible: string }) =>
     isVisible
       ? css`

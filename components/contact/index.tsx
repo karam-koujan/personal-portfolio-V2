@@ -70,7 +70,7 @@ const Contact = ({
     threshold: 0.3
   });
   return (
-    <Section className="px-[2rem] md:px-[1rem] pt-[4.5rem]">
+    <Section className="px-[2rem] md:px-[1rem] pt-[4.5rem]" id="#contact">
       <div className="mx-auto w-full max-w-6xl">
         <Title isVisible={isVisible} ref={ref}>
           Contact Me
@@ -81,6 +81,7 @@ const Contact = ({
           action="https://formsubmit.co/455e550f85f6a23e8191f90a4df86f42"
           method="POST"
           onSubmit={handleSubmit}
+          className="max-w-[50rem] "
         >
           <Strong className="text-color-primary dark:text-color-white">
             Feel free to email me via{" "}
@@ -140,7 +141,7 @@ const Contact = ({
             <Error>{errors.message}</Error>
           ) : null}
           <Button
-            className="self-center font-[1rem] py-[.5rem] px-[3rem]"
+            className="self-center font-[1rem] py-[.5rem] "
             type="submit"
             onClick={handleSubmit}
           >
