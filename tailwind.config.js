@@ -19,6 +19,9 @@ module.exports = {
         "color-third": "#ababab",
         "color-white": "#ffffff"
       },
+      gridTemplateColumns: {
+        fit: "repeat(auto-fit,minmax(4rem,140px))"
+      },
       animation: {
         "fade-in": "fadeIn ease-in 0.4s finite"
       },

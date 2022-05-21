@@ -31,9 +31,9 @@ const Project = ({
     };
   }, []);
   return (
-    <div className="flex justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.65)]">
+    <div className="flex  justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.65)]">
       <div
-        className="bg-color-white dark:bg-color-primary py-[1rem] rounded-[2px] max-h-[97vh] overflow-y-auto "
+        className="bg-color-white max-w-[600px] w-full dark:bg-color-primary py-[1rem] rounded-[2px] max-h-[97vh] overflow-y-auto "
         tabIndex={0}
       >
         <h3
@@ -64,7 +64,7 @@ const Project = ({
         <p className="text-color-primary dark:text-color-white pl-[1rem] py-[1rem]">
           {text}
         </p>
-        <div className="flex gap-4 px-[1rem]">
+        <div className="flex flex-wrap flex-wrap gap-4 px-[1rem] items-center ">
           {techs.map((tech, idx) => (
             <div
               key={idx}

@@ -64,7 +64,7 @@ const Text = styled.p`
 const Wrapper = styled.div`
   display: grid;
   grid-gap: 2%;
-  grid-template-columns: repeat(auto-fit, minmax(23%, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   opacity: 0;
   transform: translateY(20%);
   ${({ isVisible }: { isVisible: boolean }) =>

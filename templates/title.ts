@@ -10,7 +10,7 @@ const Bullet = styled.span`
   margin-right: 0.5rem;
 `;
 const Title = styled.h2`
-  font-size: clamp(3rem, 6vw, 3.4rem);
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
   text-transform: capitalize;
   transform: translateY(100%);
   opacity: 0;

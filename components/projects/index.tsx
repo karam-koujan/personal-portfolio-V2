@@ -42,7 +42,7 @@ const Projects = ({ projects }: propsI) => {
     >
       <div className="mx-auto w-full max-w-6xl">
         <Title isVisible={isVisible}>Experimental Projects</Title>
-        <Wrapper isVisible={isVisible}>
+        <Wrapper isVisible={isVisible} className="lg:block md:gap-4">
           {projects.map((projectData, idx) => (
             <ProjectWrapper
               key={idx}
