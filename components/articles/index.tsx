@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../common/button";
 import {
   ArticleImg,
   ArticleMetaData,
@@ -104,11 +105,13 @@ const Articles = ({ articles, blogLink }: propsI) => {
             )
           )}
         </ArticleWrapper>
-        {articles.length > 3 ? (
-          <BtnWrapper>
-            <Btn href={blogLink} target={blogLink}>
-              see more
-            </Btn>
+        {articles.length > 2 ? (
+          <BtnWrapper className="mt-[2rem]">
+            <Link href={blogLink} target={blogLink}>
+              <a>
+                <Button>see more</Button>
+              </a>
+            </Link>
           </BtnWrapper>
         ) : null}
       </div>
