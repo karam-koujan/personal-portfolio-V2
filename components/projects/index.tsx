@@ -25,6 +25,7 @@ interface propsI {
 }
 
 const Projects = ({ projects }: propsI) => {
+  React.useEffect(() => console.log("projects", projects), []);
   const [selectedProject, setSelectedProject] = React.useState({});
   const handleRemoveSelectedProject = () => setSelectedProject({});
   const handleSelectProject = (data: projectI) => () =>

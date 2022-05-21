@@ -4,6 +4,7 @@ import Layout from "../components/common/layout";
 import Introduction from "../components/introduction";
 import About from "../components/about";
 import Projects from "../components/projects";
+import Articles from "../components/articles";
 interface projectI {
   title: string;
   image: string;
@@ -14,17 +15,36 @@ interface projectI {
   embedLink: string;
   repo: string;
 }
+interface articlesI {
+  title: string;
+  image: string;
+  introduction: string;
+  tags: string[];
+  placeholder: string;
+  duration: string;
+  date: string;
+  link: string;
+}
 interface propsI {
   nav: string[];
   about: any;
   projects: projectI[];
+  articles: articlesI[];
+  blogLink: string;
 }
-const Home: NextPage = ({ nav, about, projects }: propsI) => {
+const Home: NextPage = ({
+  nav,
+  about,
+  projects,
+  articles,
+  blogLink
+}: propsI) => {
   return (
     <Layout nav={nav}>
       <Introduction />
       <About about={about} />
       <Projects projects={projects} />
+      <Articles articles={articles} blogLink={blogLink} />
     </Layout>
   );
 };
@@ -41,11 +61,18 @@ export async function getStaticProps() {
     "projects",
     "projects.md"
   ]);
+  const articlesData = await parseMdFileToObj([
+    ...commonPath,
+    "articles",
+    "articles.md"
+  ]);
   return {
     props: {
       nav: navData.data.nav,
       about: aboutData.data,
-      projects: projectsData.data.projects
+      projects: projectsData.data.projects,
+      articles: articlesData.data.articles,
+      blogLink: articlesData.data.blogLink
     }
   };
 }
