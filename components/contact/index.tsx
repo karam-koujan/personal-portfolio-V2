@@ -71,8 +71,8 @@ const Contact = ({
   });
   return (
     <Section className="px-[2rem] md:px-[1rem] pt-[4.5rem]" id="#contact">
-      <div className="mx-auto w-full max-w-6xl ">
-        <Title isVisible={isVisible} ref={ref}>
+      <div className="mx-auto w-full max-w-[50rem] ">
+        <Title isVisible={isVisible} className="w-fit mx-auto" ref={ref}>
           Contact Me
         </Title>
         <Wrapper
@@ -81,7 +81,7 @@ const Contact = ({
           action="https://formsubmit.co/455e550f85f6a23e8191f90a4df86f42"
           method="POST"
           onSubmit={handleSubmit}
-          className="max-w-[50rem] "
+          className="max-w-[70rem] "
         >
           <Strong className="text-color-primary dark:text-color-white">
             Feel free to email me via{" "}
