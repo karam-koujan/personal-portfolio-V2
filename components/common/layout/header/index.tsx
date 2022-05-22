@@ -28,8 +28,8 @@ const Header = ({ nav }: HeaderI) => {
 
       <div className={` height-0 bg-color-primary relative z-10 `}>
         <div
-          className={`hidden opacity-0 max-h-[0]  translate-y-[-10%]  transition-all linear duration-500   absolute right-[0]  sm:flex gap-7 items-center flex-col   w-[25rem] py-7 justify-center bg-color-white dark:bg-color-primary shadow-3xl  ${
-            showNavBar ? "max-h-[999px] opacity-100 translate-y-0" : ""
+          className={`hidden  max-h-[0]  translate-y-[-10%] opacity-0  transition-all linear duration-300 sm:flex   absolute right-[0]  gap-7 items-center flex-col  w-full  py-7 justify-center bg-color-white dark:bg-color-primary shadow-3xl  ${
+            showNavBar ? "max-h-[999px] opacity-100 translate-y-0 " : ""
           }`}
         >
           {nav.map((navItem: string, idx: number) => (
