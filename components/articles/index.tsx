@@ -43,10 +43,10 @@ const Articles = ({ articles, blogLink }: propsI) => {
   });
 
   return (
-    <Section ref={ref} className="px-[2rem] md:px-[1rem] pt-[4.5rem]">
+    <Section ref={ref} className="px-[2rem]  md:px-[1rem] pt-[4.5rem]">
       <div className="mx-auto w-full max-w-6xl">
         <Title isVisible={isVisible}>Articles</Title>
-        <ArticleWrapper isVisible={isVisible}>
+        <ArticleWrapper isVisible={isVisible} className="gap-[5%] sm:gap-[2%]">
           {articles.map(
             (
               {
