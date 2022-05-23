@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="mt-[4.5rem] py-[2rem] before:polygoan">
       <div className="mx-auto w-full max-w-6xl">
-        <div className="hidden md:flex gap-[2rem] w-fit mx-auto">
+        <div className="hidden xl:flex gap-[2rem] w-fit mx-auto">
           <svg
-            className="fill-color-secondary w-[20px] cursor-pointer"
+            className="fill-color-primary dark:fill-color-white  w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 18 18"
           >
@@ -15,7 +15,7 @@ const Footer = () => {
             </g>
           </svg>
           <svg
-            className="fill-color-secondary w-[20px] cursor-pointer"
+            className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 18 18"
           >
@@ -24,7 +24,7 @@ const Footer = () => {
             </g>
           </svg>
           <svg
-            className="fill-color-secondary w-[20px] cursor-pointer"
+            className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 18 18"
           >
@@ -33,7 +33,7 @@ const Footer = () => {
             </g>
           </svg>
           <svg
-            className="fill-color-secondary w-[20px] cursor-pointer"
+            className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
           >
@@ -41,9 +41,9 @@ const Footer = () => {
           </svg>
         </div>
       </div>
-      <div className=" gap-[2rem] w-fit flex flex-col fixed pr-[1rem] right-0 bottom-0 ">
+      <div className=" xl:hidden gap-[2rem] w-fit flex flex-col fixed pr-[1rem] right-0 bottom-0 ">
         <svg
-          className="fill-color-secondary w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
+          className="fill-color-primary dark:fill-color-white  w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 18 18"
         >
@@ -52,7 +52,7 @@ const Footer = () => {
           </g>
         </svg>
         <svg
-          className="fill-color-secondary w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
+          className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 18 18"
         >
@@ -61,7 +61,7 @@ const Footer = () => {
           </g>
         </svg>
         <svg
-          className="fill-color-secondary w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
+          className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 18 18"
         >
@@ -70,13 +70,13 @@ const Footer = () => {
           </g>
         </svg>
         <svg
-          className="fill-color-secondary w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
+          className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 50 50"
         >
           <path d="M1 9c-.6 0-1 .4-1 1v14.1C0 30.3 4.7 35.6 10.8 36c5.9.3 10.9-3.8 12-9.3.6.7 1.1 1.4 1.7 2.1l-3.5 15c-.1.3 0 .6.2.8.2.3.5.4.8.4h5.1c.5 0 .9-.3 1-.8.6-2.6 1.6-6.7 2.4-10.4l1 .5c2.1 1.1 4.3 1.7 6.5 1.7 7.2 0 12.9-6.4 11.9-13.7-.7-4.9-4.5-9-9.3-10-5.6-1.2-11.1 1.6-13.4 6.4 0 0-.3.6-.5 1.2-1.6-2.9-2.6-5.8-3.1-7.9-.2-.8-.5-2.2-.5-2.3-.1-.4-.5-.7-.9-.7H17c-.6 0-1 .4-1 1v14.3c0 2.3-1.7 4.5-4.1 4.7-2.6.2-4.9-1.9-4.9-4.5V10c0-.6-.4-1-1-1H1zm37 10c2.8 0 5 2.2 5 5s-2.2 5-5 5c-2.2 0-4.3-1.3-5.7-2.5.5-2.2.9-3.7.9-3.8.5-2.2 2.5-3.7 4.8-3.7z"></path>
         </svg>
-        <div className="w-[1.1px] h-[9rem] bg-color-third rounded-tl-[1000px] rounded-tr-[1000px] justify-center self-center"></div>
+        <div className="w-[1.1px] h-[8rem] bg-color-third rounded-tl-[1000px] rounded-tr-[1000px] justify-center self-center"></div>
       </div>
     </footer>
   );
