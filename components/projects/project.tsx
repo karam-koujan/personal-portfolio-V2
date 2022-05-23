@@ -78,7 +78,7 @@ const Project = ({
         </div>
         <div className="flex gap-4 pt-[1rem] pl-[1rem] ">
           {link ? (
-            <Link href={link} target={link}>
+            <Link href={link} target={link} className="cursor-pointer">
               <a>
                 <svg
                   className="w-[25px] fill-color-primary dark:fill-color-white block"
@@ -92,10 +92,10 @@ const Project = ({
             </Link>
           ) : null}
           {repo ? (
-            <Link href="">
+            <Link href="" className="cursor-pointer">
               <a>
                 <svg
-                  className="w-[25px] fill-color-primary dark:fill-color-white block cursor-pointer"
+                  className="w-[25px] fill-color-primary dark:fill-color-white block "
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 18 18"
                 >
@@ -110,7 +110,7 @@ const Project = ({
       </div>
       <svg
         onClick={handleRemoveSelectedProject}
-        className="absolute right-[1rem] top-[1rem]"
+        className="absolute right-[1rem] top-[1rem] cursor-pointer"
         aria-label="Fermer"
         color="#ffffff"
         fill="#ffffff"
