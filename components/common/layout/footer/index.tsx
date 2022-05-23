@@ -41,11 +41,11 @@ const Footer = () => {
           </svg>
         </div>
       </div>
-      <div className="flex w-fit mx-auto">
-        <p className="text-[.9rem] text-color-primary dark:text-color-white">
+      <div className="flex w-fit mx-auto ">
+        <p className="text-[.9rem]  text-color-primary dark:text-color-white">
           ©&nbsp;karam koujan 2022.
         </p>
-        <p className="flex text-[.9rem] text-color-primary dark:text-color-white">
+        <p className="flex text-[.9rem] ml-[.3rem] text-color-primary dark:text-color-white">
           built with
           <Link href="">
             <a>
