@@ -1,3 +1,4 @@
+import React from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import {
@@ -33,6 +34,7 @@ const Contact = ({
     contactSource: { link, email }
   }
 }: propsI) => {
+  const [statusCode, setStatusCode] = React.useState<number | undefined>();
   const validationSchema = Yup.object({
     fullName: Yup.string().required("Full name is required"),
     email: Yup.string()
@@ -62,7 +64,7 @@ const Contact = ({
         },
         method: "POST",
         body: JSON.stringify(values)
-      });
+      }).then((res) => setStatusCode(res.status));
     }
   });
   const [isVisible, ref] = useOnScreen({
@@ -140,7 +142,22 @@ const Contact = ({
           {errors.message && touched.message ? (
             <Error>{errors.message}</Error>
           ) : null}
-          <Button className="self-center " type="submit" onClick={handleSubmit}>
+          {statusCode === 200 ? (
+            <p className="text-color-secondary text-[1.1rem] mb-[1.5rem]">
+              The email is sent successfully
+            </p>
+          ) : statusCode === undefined ? (
+            ""
+          ) : (
+            <p className="text-color-error text-[1.1rem] mb-[1.5rem]">
+              unfortunately, an error happened
+            </p>
+          )}
+          <Button
+            className="self-center justify-self-center py-[10px]"
+            type="submit"
+            onClick={handleSubmit}
+          >
             send
           </Button>
         </Wrapper>

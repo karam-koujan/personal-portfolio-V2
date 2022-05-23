@@ -18,7 +18,8 @@ module.exports = {
         "color-primary": "#191a1b",
         "color-secondary": "#4b6cc1",
         "color-third": "#ababab",
-        "color-white": "#ffffff"
+        "color-white": "#ffffff",
+        "color-error": "red"
       },
       gridTemplateColumns: {
         fit: "repeat(auto-fit,minmax(4rem,140px))"
