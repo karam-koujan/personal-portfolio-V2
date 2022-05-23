@@ -31,7 +31,7 @@ const Project = ({
     };
   }, []);
   return (
-    <div className="flex  justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.65)]">
+    <div className="flex z-10 justify-center items-center fixed top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,.65)]">
       <div
         className="bg-color-white max-w-[600px] w-full dark:bg-color-primary py-[1rem] rounded-[2px] max-h-[97vh] overflow-y-auto "
         tabIndex={0}

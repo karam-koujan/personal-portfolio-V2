@@ -140,11 +140,7 @@ const Contact = ({
           {errors.message && touched.message ? (
             <Error>{errors.message}</Error>
           ) : null}
-          <Button
-            className="self-center ] "
-            type="submit"
-            onClick={handleSubmit}
-          >
+          <Button className="self-center " type="submit" onClick={handleSubmit}>
             send
           </Button>
         </Wrapper>
