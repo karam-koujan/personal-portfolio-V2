@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="mt-[4.5rem] py-[2rem] before:polygoan">
       <div className="mx-auto w-full max-w-6xl">
-        <div className="hidden xl:flex gap-[2rem] mb-[1rem]  w-fit mx-auto">
+        <div className="hidden xl:flex gap-[2rem] mb-[2rem]  w-fit mx-auto">
           <svg
             className="fill-color-primary dark:fill-color-white  w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
             xmlns="http://www.w3.org/2000/svg"
