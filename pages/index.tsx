@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { parseMdFileToObj } from "../lib/";
+import SEO from "../components/common/SEO";
 import Layout from "../components/common/layout";
 import Introduction from "../components/introduction";
 import About from "../components/about";
@@ -52,13 +53,16 @@ const Home: NextPage = ({
   contact
 }: propsI) => {
   return (
-    <Layout nav={nav}>
-      <Introduction />
-      <About about={about} />
-      <Projects projects={projects} />
-      <Articles articles={articles} blogLink={blogLink} />
-      <Contact contact={contact} />
-    </Layout>
+    <>
+      <SEO title="karam koujan | Front end Dev" />
+      <Layout nav={nav}>
+        <Introduction />
+        <About about={about} />
+        <Projects projects={projects} />
+        <Articles articles={articles} blogLink={blogLink} />
+        <Contact contact={contact} />
+      </Layout>
+    </>
   );
 };
 export async function getStaticProps() {

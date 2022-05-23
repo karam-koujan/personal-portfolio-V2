@@ -1,6 +1,7 @@
-import logo from "../../../public/assets/logo.svg";
+import Image from "next/image";
+import logo from "../../../public/logo.svg";
 
 const Logo = () => {
-  return <img src={logo.src} alt="logo" width="50px" height="50px" />;
+  return <Image src={logo} width={50} height={50} />;
 };
 export default Logo;
