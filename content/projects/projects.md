@@ -16,7 +16,7 @@ projects:
       title: Freelancers Reviews Maps,
       image: "/assets/images/sideProject.jpg",
       link: "",
-      embedLink: "https://www.youtube.com/embed/-95L9Hi-NQw",
+      embedLink: "https://www.youtube.com/embed/9Wu4l-Due4I",
       text: "Find talented freelancers nearby you ",
       placeholder: "#19BD33",
       repo: "https://github.com/karam-koujan/side-project",
@@ -43,6 +43,23 @@ projects:
       text: "an ecommerce app built with Next.js and Stripe.js",
       placeholder: "#F7444E",
       techs: ["TypeScript", "Next.js", "React.js", "Stripe.js"],
+    },
+    {
+      title: personal portfolio V2,
+      image: "/assets/images/ecommerce.jpg",
+      link: "https://ecommerce-766du20bt-karam-koujan.vercel.app/",
+      embedLink: "",
+      repo: "https://github.com/karam-koujan/personal-portfolio-V2",
+      text: "version 2 of my personal portfolio",
+      placeholder: "#4b6cc1",
+      techs:
+        [
+          "TypeScript",
+          "Next.js",
+          "React.js",
+          "Tailwind css",
+          "styled components",
+        ],
     },
   ]
 ---

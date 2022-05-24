@@ -9,10 +9,12 @@ skills:
     Typescript,
     Next.js,
     Styled-components,
-    react-query,
-    node.js,
-    mongoDb,
-    express,
-    git,
+    React-query,
+    Tailwind,
+    Node.js,
+    MongoDb,
+    Express,
+    Git,
+    Docker,
   ]
 ---

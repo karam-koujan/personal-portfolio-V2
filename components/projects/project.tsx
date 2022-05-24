@@ -92,7 +92,7 @@ const Project = ({
             </Link>
           ) : null}
           {repo ? (
-            <Link href="" className="cursor-pointer">
+            <Link href={link} target={link} className="cursor-pointer">
               <a>
                 <svg
                   className="w-[25px] fill-color-primary dark:fill-color-white block "
