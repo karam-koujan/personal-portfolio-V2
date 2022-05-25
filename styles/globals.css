@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Rubik, sans-serif;
+    overflow-x: hidden;
+  }
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+@layer utilities {
+  .polygoan {
+    clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+  }
+}
