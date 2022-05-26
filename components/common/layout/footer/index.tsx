@@ -106,7 +106,7 @@ const Footer = () => {
           </Link>
         </p>
       </div>
-      <SocialMediaLinks className=" xl:hidden gap-[2rem] w-fit flex flex-col fixed pr-[1rem] right-0 bottom-0 ">
+      <SocialMediaLinks className=" mxl:flex hidden gap-[2rem] w-fit  flex-col fixed pr-[1rem] right-0 bottom-0 ">
         <Link href={socialMedia.twitter}>
           <a>
             <svg
