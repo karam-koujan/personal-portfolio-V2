@@ -31,7 +31,7 @@ const Projects = ({ projects }: propsI) => {
     setSelectedProject(data);
   const [isVisible, ref] = useOnScreen({
     rootMargin: "0px 0px 0px 0px",
-    threshold: 0.3
+    threshold: 0.2
   });
   return (
     <Section
