@@ -57,7 +57,7 @@ const Contact = ({
     },
     validationSchema,
     onSubmit: () => {
-      fetch("https://formsubmit.co/455e550f85f6a23e8191f90a4df86f42", {
+      fetch("https://formsubmit.co/karamkoujandev@gmail.com", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json"
@@ -80,7 +80,7 @@ const Contact = ({
         <Wrapper
           isVisible={isVisible}
           ref={ref}
-          action="https://formsubmit.co/455e550f85f6a23e8191f90a4df86f42"
+          action="https://formsubmit.co/karamkoujandev@gmail.com"
           method="POST"
           onSubmit={handleSubmit}
           className="max-w-[70rem] "
