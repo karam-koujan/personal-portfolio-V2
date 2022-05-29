@@ -39,7 +39,7 @@ const About = ({ about: { text, skills } }: propsI) => {
             <Text className="text-color-primary dark:text-color-white">
               {text}
             </Text>
-            <TechList className="bg-color-third before:bg-color-secondary grid-cols-[repeat(3,1fr)]  md:grid-[1rem] sm:grid-cols-[repeat(2,1fr)]">
+            <TechList className="before:bg-color-secondary grid-cols-[repeat(3,1fr)]  md:grid-[1rem] sm:grid-cols-[repeat(2,1fr)]">
               {skills.map((skill, idx) => (
                 <TechItem
                   key={idx}
