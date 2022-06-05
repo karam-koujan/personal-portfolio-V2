@@ -51,7 +51,7 @@ const Articles = ({ articles, blogLink }: propsI) => {
       <div className="mx-auto w-full max-w-6xl">
         <Title isVisible={isVisible}>Articles</Title>
         <ArticleWrapper isVisible={isVisible} className="gap-[5%] sm:gap-[2%]">
-          {articles.slice(0,3).map(
+          {articles.map(
             (
               {
                 title,
@@ -109,7 +109,7 @@ const Articles = ({ articles, blogLink }: propsI) => {
             )
           )}
         </ArticleWrapper>
-        {articles.length > 3 ? (
+        {articles.length > 4 ? (
           <BtnWrapper className="mt-[2rem]">
             <Link href={blogLink} target={blogLink}>
               <a>
