@@ -51,7 +51,7 @@ const Articles = ({ articles, blogLink }: propsI) => {
       <div className="mx-auto w-full max-w-6xl">
         <Title isVisible={isVisible}>Articles</Title>
         <ArticleWrapper isVisible={isVisible} className="gap-[5%] sm:gap-[2%]">
-          {articles.map(
+          {articles.slice(0,4).map(
             (
               {
                 title,
