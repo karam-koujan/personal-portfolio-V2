@@ -2,14 +2,14 @@
 articles:
   [
     {
-      title: Infinite scrolling with React,
-      image: /assets/images/blog/infiniteScrolling.jpg,
-      introduction: "Infinite scrolling is a web-design technique that loads content continuously as the user scrolls down the page, eliminating the need for pagination. This technique is used by social media sites and in this article we are going to learn how to implement infinite scrolling in our apps using React.",
-      tags: [dev, react, javascript],
-      placeholder: black,
-      duration: 3 min,
-      date: 2 févr. 2022,
-      link: https://dev.to/karamkoujan/infinite-scrolling-with-react-1kaa,
+     title: == versus ===,
+     image: /assets/images/blog/strictvsregular.png,
+     introduction: "There is a very common misconception about the difference between == (loose equals) and === (strict equals) operators, the misconception is: “== checks values for equality and === checks both values and types for equality”. The correct description is “== allows coercion in the equality comparison and === disallows coercion”. === behavior is obvious, so in this article I will focus more on == behavior.",
+     tags: [dev, javascript],
+     placeholder: "#D9C51B",
+     duration: 2 min,
+     date: 05 june. 2022,
+     link: https://dev.to/karamkoujan/-versus--70e
     },
     {
       title: Arrow function vs Regular function,
@@ -31,6 +31,16 @@ articles:
       date: 28 févr. 2022,
       link: https://dev.to/karamkoujan/var-vs-let-vs-const-peg,
     },
+      {
+      title: Infinite scrolling with React,
+      image: /assets/images/blog/infiniteScrolling.jpg,
+      introduction: "Infinite scrolling is a web-design technique that loads content continuously as the user scrolls down the page, eliminating the need for pagination. This technique is used by social media sites and in this article we are going to learn how to implement infinite scrolling in our apps using React.",
+      tags: [dev, react, javascript],
+      placeholder: black,
+      duration: 3 min,
+      date: 2 févr. 2022,
+      link: https://dev.to/karamkoujan/infinite-scrolling-with-react-1kaa,
+    }
   ]
 blogLink: https://dev.to/karamkoujan
 ---
