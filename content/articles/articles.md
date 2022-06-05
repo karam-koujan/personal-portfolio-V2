@@ -18,7 +18,7 @@ articles:
       tags: [dev, javascript],
       placeholder: "#D9C51B",
       duration: 3 min,
-      date: 14 févr. 2022,
+      date: 14 feb. 2022,
       link: https://dev.to/karamkoujan/arrow-function-vs-regular-function-5c19,
     },
     {
@@ -28,7 +28,7 @@ articles:
       tags: [dev, javascript],
       placeholder: "#D9C51B",
       duration: 2 min,
-      date: 28 févr. 2022,
+      date: 28 feb. 2022,
       link: https://dev.to/karamkoujan/var-vs-let-vs-const-peg,
     },
       {
@@ -38,7 +38,7 @@ articles:
       tags: [dev, react, javascript],
       placeholder: black,
       duration: 3 min,
-      date: 2 févr. 2022,
+      date: 2 feb. 2022,
       link: https://dev.to/karamkoujan/infinite-scrolling-with-react-1kaa,
     }
   ]
