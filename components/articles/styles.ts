@@ -8,9 +8,8 @@ const ArticleText = styled.p`
   line-height: 22px;
 `;
 const BtnWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: subgrid;
+  grid-column: 2/3;
 `;
 const Btn = styled.button`
   border: 2px solid var(--blue);
@@ -39,8 +38,14 @@ const ArticleWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   opacity: 0;
-  padding: 1rem 0 0rem 0;
+  padding: 1rem 0 2rem 0;
   transform: translateY(20%);
+  @media (max-width: 641px) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 0;
+  }
   ${({ isVisible }: { isVisible: string }) =>
     isVisible
       ? css`

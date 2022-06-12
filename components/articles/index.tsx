@@ -51,73 +51,77 @@ const Articles = ({ articles, blogLink }: propsI) => {
       <div className="mx-auto w-full max-w-6xl">
         <Title isVisible={isVisible}>Articles</Title>
         <ArticleWrapper isVisible={isVisible} className="gap-[5%] sm:gap-[2%]">
-          {articles.slice(0,3).map(
-            (
-              {
-                title,
-                image,
-                placeholder,
-                introduction,
-                tags,
-                date,
-                link,
-                duration
-              },
-              idx
-            ) => (
-              <Wrapper key={idx}>
-                <Link href={link}>
-                  <a target={link}>
-                    <ArticleImg placeholderColor={placeholder}>
-                      <Image
-                        layout="responsive"
-                        height={60}
-                        width={100}
-                        src={image}
-                        alt={`${title} image`}
-                      />
-                    </ArticleImg>
-                    <TextWrapper>
-                      <ArticleTitle className="text-color-primary dark:text-color-white my-[1rem] font-bold">
-                        {title}
-                      </ArticleTitle>
-                      <ArticleText className="text-color-primary dark:text-color-white my-[1rem]">
-                        {introduction}
-                      </ArticleText>
-                      <ArticleMetaData>
-                        <TagWrapper>
-                          {tags.map((tag, idx) => (
-                            <Tag
-                              key={idx}
-                              className="bg-color-secondary text-color-white"
-                            >
-                              {tag}
-                            </Tag>
-                          ))}
-                        </TagWrapper>
-                        <Date className="text-color-primary dark:text-color-white">
-                          {date}
-                        </Date>
-                        <Duration className="text-color-primary dark:text-color-white">
-                          {duration}
-                        </Duration>
-                      </ArticleMetaData>
-                    </TextWrapper>
+          {articles
+            .slice(0, 3)
+            .map(
+              (
+                {
+                  title,
+                  image,
+                  placeholder,
+                  introduction,
+                  tags,
+                  date,
+                  link,
+                  duration
+                },
+                idx
+              ) => (
+                <Wrapper key={idx}>
+                  <Link href={link}>
+                    <a target={link}>
+                      <ArticleImg placeholderColor={placeholder}>
+                        <Image
+                          layout="responsive"
+                          height={60}
+                          width={100}
+                          src={image}
+                          alt={`${title} image`}
+                        />
+                      </ArticleImg>
+                      <TextWrapper>
+                        <ArticleTitle className="text-color-primary dark:text-color-white my-[1rem] font-bold">
+                          {title}
+                        </ArticleTitle>
+                        <ArticleText className="text-color-primary dark:text-color-white my-[1rem]">
+                          {introduction}
+                        </ArticleText>
+                        <ArticleMetaData>
+                          <TagWrapper>
+                            {tags.map((tag, idx) => (
+                              <Tag
+                                key={idx}
+                                className="bg-color-secondary text-color-white"
+                              >
+                                {tag}
+                              </Tag>
+                            ))}
+                          </TagWrapper>
+                          <Date className="text-color-primary dark:text-color-white">
+                            {date}
+                          </Date>
+                          <Duration className="text-color-primary dark:text-color-white">
+                            {duration}
+                          </Duration>
+                        </ArticleMetaData>
+                      </TextWrapper>
+                    </a>
+                  </Link>
+                </Wrapper>
+              )
+            )}
+          {articles.length > 3 ? (
+            <BtnWrapper>
+              <div className="flex flex-col justify-center items-center h-[100%]">
+                <Link href={blogLink} target={blogLink}>
+                  <a>
+                    <Button>see more</Button>
                   </a>
                 </Link>
-              </Wrapper>
-            )
-          )}
+              </div>
+            </BtnWrapper>
+          ) : null}
         </ArticleWrapper>
-        {articles.length > 4 ? (
-          <BtnWrapper className="mt-[2rem]">
-            <Link href={blogLink} target={blogLink}>
-              <a>
-                <Button>see more</Button>
-              </a>
-            </Link>
-          </BtnWrapper>
-        ) : null}
       </div>
     </Section>
   );
