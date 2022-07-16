@@ -109,7 +109,7 @@ const Articles = ({ articles, blogLink }: propsI) => {
             )
           )}
         </ArticleWrapper>
-        {articles.length > 4 ? (
+        {false ? (
           <BtnWrapper className="mt-[2rem]">
             <Link href={blogLink} target={blogLink}>
               <a>
