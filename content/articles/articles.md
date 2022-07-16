@@ -22,6 +22,17 @@ articles:
       link: https://dev.to/karamkoujan/arrow-function-vs-regular-function-5c19,
     },
     {
+       title: The Event Loop,
+      image: /assets/images/blog/event.png,
+      introduction:The event loop model gives javascript the possibility to handle many operations like I/O in a non-blocking way even though it’s a single   threaded language.,
+      tags: [dev, javascript],
+      placeholder: "#4b6cc1",
+      duration: 2 min,
+      date: 15 july. 2022,
+      link: https://dev.to/karamkoujan/the-event-loop-46dj,
+    }
+    ,
+    {
       title: Var vs Let vs Const,
       image: /assets/images/blog/0-intro.png,
       introduction: "Javascript has 3 keywords to declare a variable, let, const and var. In this article we are going to talk about the similarities and the differences between these keywords.",
