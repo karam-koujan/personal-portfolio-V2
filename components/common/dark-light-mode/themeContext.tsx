@@ -15,13 +15,20 @@ const getInitialTheme = () => {
 
    return 'light' // light theme as the default;
 };
+interface ThemeContextI {
+    theme:string;
+    setTheme : React.Dispatch<React.SetStateAction<string>>|any
+}
+interface ThemeProviderI{
+    initialTheme:string;
+    children:React.ReactNode;
+}
+export const ThemeContext:React.Context<ThemeContextI> = React.createContext({theme:"light",setTheme:()=>undefined});
 
-export const ThemeContext = React.createContext();
-
-export const ThemeProvider = ({ initialTheme, children }) => {
+export const ThemeProvider = ({ initialTheme, children }:ThemeProviderI) => {
     const [theme, setTheme] = React.useState(getInitialTheme);
 
-    const rawSetTheme = (rawTheme) => {
+    const rawSetTheme = (rawTheme:string) => {
         const root = window.document.documentElement;
         const isDark = rawTheme === 'dark';
 

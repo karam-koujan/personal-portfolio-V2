@@ -5,7 +5,7 @@ import { useThemeContext } from "./themeContext";
 const Toggle = () => {
   const { theme, setTheme } = useThemeContext();
   const handleTheme = (theme: string) => {
-    return (e) => {
+    return () => {
       setTheme(theme === "dark" ? "light" : "dark");
     };
   };

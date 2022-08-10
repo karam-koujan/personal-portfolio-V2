@@ -2,17 +2,14 @@ import { useState, useRef, useEffect } from "react";
 export const useOnScreen = (options: {
   rootMargin: string;
   threshold: number;
-}): (
-  | boolean
-  | ((instance: HTMLElement | null) => void)
+}):[boolean,((instance: HTMLElement | null) => void)
   | React.RefObject<HTMLElement>
   | null
-  | undefined
-)[] => {
+  | undefined]=> {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
+  useEffect(():(()=>void) => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
