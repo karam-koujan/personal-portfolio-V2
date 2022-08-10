@@ -26,8 +26,7 @@ interface propsI {
 
 const Projects = ({ projects }: propsI) => {
  
-  const handleSelectProject = (data: projectI) => () =>
-    setSelectedProject(data);
+
   const [isVisible, ref] = useOnScreen({
     rootMargin: "0px 0px 0px 0px",
     threshold: 0.2
@@ -44,9 +43,10 @@ const Projects = ({ projects }: propsI) => {
         <Wrapper isVisible={isVisible} className="lg:block md:gap-4">
           {projects.map((projectData, idx) => (
             <ProjectWrapper
-              tabIndex={0}
+		tabIndex={0}
+                key={idx}
             >
-            <Link href={projectData.link}  key={idx} >
+            <Link href={projectData.link}  >
              <a target="_blank">
               <ProjectTitle className="text-color-primary dark:text-color-white">
                 {projectData.title}
