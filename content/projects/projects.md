@@ -6,7 +6,7 @@ projects:
       image: "/assets/images/social-media-app.jpg",
       text: "a social media app built with mern stack",
       placeholder: "#262626",
-      link: "",
+      link: "https://youtu.be/TWHMeKpaNpE",
       embedLink: "https://www.youtube.com/embed/TWHMeKpaNpE",
       repo: "https://github.com/karam-koujan/social-media-app",
       techs:
@@ -15,7 +15,7 @@ projects:
     {
       title: Freelancers Reviews Maps,
       image: "/assets/images/sideProject.jpg",
-      link: "",
+      link: "https://youtu.be/9Wu4l-Due4I",
       embedLink: "https://www.youtube.com/embed/9Wu4l-Due4I",
       text: "Find talented freelancers nearby you ",
       placeholder: "#19BD33",

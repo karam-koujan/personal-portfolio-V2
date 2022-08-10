@@ -1,7 +1,7 @@
 import * as React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { useOnScreen } from "../../hooks/";
-import Project from "./project.tsx";
 import {
   Project as ProjectWrapper,
   ProjectImg,
@@ -25,8 +25,7 @@ interface propsI {
 }
 
 const Projects = ({ projects }: propsI) => {
-  const [selectedProject, setSelectedProject] = React.useState({});
-  const handleRemoveSelectedProject = () => setSelectedProject({});
+ 
   const handleSelectProject = (data: projectI) => () =>
     setSelectedProject(data);
   const [isVisible, ref] = useOnScreen({
@@ -44,10 +43,10 @@ const Projects = ({ projects }: propsI) => {
         <Title isVisible={isVisible}>Previous Projects</Title>
         <Wrapper isVisible={isVisible} className="lg:block md:gap-4">
           {projects.map((projectData, idx) => (
+            <Link href={projectData.link}  key={idx} >
+             <a target="_blank">
             <ProjectWrapper
-              key={idx}
               tabIndex={0}
-              onClick={handleSelectProject(projectData)}
             >
               <ProjectTitle className="text-color-primary dark:text-color-white">
                 {projectData.title}
@@ -66,15 +65,11 @@ const Projects = ({ projects }: propsI) => {
                 {projectData.text}
               </Text>
             </ProjectWrapper>
+            </a>
+            </Link>
           ))}
         </Wrapper>
       </div>
-      {Object.keys(selectedProject).length ? (
-        <Project
-          {...selectedProject}
-          handleRemoveSelectedProject={handleRemoveSelectedProject}
-        />
-      ) : null}
     </Section>
   );
 };
