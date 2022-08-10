@@ -43,11 +43,11 @@ const Projects = ({ projects }: propsI) => {
         <Title isVisible={isVisible}>Previous Projects</Title>
         <Wrapper isVisible={isVisible} className="lg:block md:gap-4">
           {projects.map((projectData, idx) => (
-            <Link href={projectData.link}  key={idx} >
-             <a target="_blank">
             <ProjectWrapper
               tabIndex={0}
             >
+            <Link href={projectData.link}  key={idx} >
+             <a target="_blank">
               <ProjectTitle className="text-color-primary dark:text-color-white">
                 {projectData.title}
               </ProjectTitle>
@@ -64,9 +64,9 @@ const Projects = ({ projects }: propsI) => {
               <Text className="text-color-primary dark:text-color-white">
                 {projectData.text}
               </Text>
-            </ProjectWrapper>
             </a>
             </Link>
+            </ProjectWrapper>
           ))}
         </Wrapper>
       </div>
