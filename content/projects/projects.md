@@ -2,9 +2,9 @@
 projects:
   [
     {
-      title: social media app,
+      title: instegram clone,
       image: "/assets/images/social-media-app.jpg",
-      text: "a social media app built with mern stack",
+      text: "I built a social media app using react and node js, click to watch the demo video.",
       placeholder: "#262626",
       link: "https://youtu.be/TWHMeKpaNpE",
       embedLink: "https://www.youtube.com/embed/TWHMeKpaNpE",
