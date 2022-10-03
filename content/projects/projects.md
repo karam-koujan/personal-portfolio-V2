@@ -4,7 +4,7 @@ projects:
     {
       title: instegram clone,
       image: "/assets/images/social-media-app.jpg",
-      text: "I built a social media app using react and node js, click to watch the demo video.",
+      text: "I built a social media app using react and node js.",
       placeholder: "#262626",
       link: "https://youtu.be/TWHMeKpaNpE",
       embedLink: "https://www.youtube.com/embed/TWHMeKpaNpE",

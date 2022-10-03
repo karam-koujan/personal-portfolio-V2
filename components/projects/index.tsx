@@ -46,8 +46,6 @@ const Projects = ({ projects }: propsI) => {
 		tabIndex={0}
                 key={idx}
             >
-            <Link href={projectData.link}  >
-             <a target="_blank">
               <ProjectTitle className="text-color-primary dark:text-color-white">
                 {projectData.title}
               </ProjectTitle>
@@ -64,10 +62,25 @@ const Projects = ({ projects }: propsI) => {
               <Text className="text-color-primary dark:text-color-white">
                 {projectData.text}
               </Text>
+            <button className="text-color-white bg-color-secondary capitalize py-[.2rem] px-[.5rem] text-center font-bold mx-[1rem] border-[1px] transition-all delay-[1000] ease-in hover:bg-color-white hover:text-color-secondary hover:border-color-secondary focus:bg-color-white focus:text-color-secondary focus:border-color-secondary">
+              <Link href={projectData.repo}>
+            <a target="_blank">
+             code
             </a>
-            </Link>
+              </Link>
+              
+            </button>
+            <button className="text-color-white bg-color-secondary capitalize py-[.2rem] px-[.5rem] text-center font-bold border-[1px] transition-all delay-[1000] ease-in hover:bg-color-white hover:text-color-secondary hover:border-color-secondary focus:bg-color-white focus:text-color-secondary focus:border-color-secondary">
+            <Link href={projectData.link}>
+            <a target="_blank">
+             demo
+            </a>
+              </Link>
+            </button>
+            
             </ProjectWrapper>
           ))}
+         
         </Wrapper>
       </div>
     </Section>
