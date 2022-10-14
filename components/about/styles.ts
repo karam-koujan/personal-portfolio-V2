@@ -24,7 +24,7 @@ const ImgWrapper = styled.div`
         `
       : null}
   & img {
-    border-radius: 3px;
+    border-radius: 50%;
   }
 `;
 const TechList = styled.ul`
