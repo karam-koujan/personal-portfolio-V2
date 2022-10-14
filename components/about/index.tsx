@@ -50,11 +50,12 @@ const About = ({ about: { text, skills } }: propsI) => {
               ))}
             </TechList>
           </TextWrapper>
-          <ImgWrapper isVisible={isVisible}>
+          <ImgWrapper isVisible={isVisible} className="w-[50%] md:w-full md:h-[500px]">
             <Image
               src={profileImg}
-              layout="responsive"
+              layout="fill"
               placeholder="blur"
+              objectFit="cover"
               alt="karam's image"
             />
           </ImgWrapper>

@@ -13,6 +13,7 @@ const ImgWrapper = styled.div`
   max-width: 300px;
   transform: translateX(1000%);
   width: 100%;
+
   ${({ isVisible }: componentI) =>
     isVisible
       ? css`
@@ -24,7 +25,7 @@ const ImgWrapper = styled.div`
         `
       : null}
   & img {
-    border-radius: 50%;
+    border-radius: 3px;
   }
 `;
 const TechList = styled.ul`
