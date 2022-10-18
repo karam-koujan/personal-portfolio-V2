@@ -57,7 +57,7 @@ const Contact = ({
     },
     validationSchema,
     onSubmit: () => {
-      fetch("https://formsubmit.co/455e550f85f6a23e8191f90a4df86f42", {
+      fetch("https://public.herotofu.com/v1/490b2d00-4e9b-11ed-8970-6943e4ac8982", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json"
