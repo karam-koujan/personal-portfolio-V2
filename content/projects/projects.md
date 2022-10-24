@@ -35,7 +35,7 @@ projects:
       image: "/assets/images/shoestore.jpg",
       link: "https://shoe-store-8kke.vercel.app/",
       embedLink: "",
-      text: "An e-commerce built with next.js and strapi as a headless cms and styled using tailwindCSS.",
+      text: "An e-commerce app built with next.js, strapi and styled using tailwindCSS.",
       placeholder: "#6e7051",
       repo: "https://github.com/karam-koujan/shoe-store",
       techs:["Strapi","Next.js","Tailwindcss","React.js","Strip.js"],
