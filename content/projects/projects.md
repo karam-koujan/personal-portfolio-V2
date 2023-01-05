@@ -6,7 +6,7 @@ projects:
       image: "/assets/images/social-media-app.jpg",
       text: "I built a social media app using react and node js.",
       placeholder: "#262626",
-      link: "https://youtu.be/TWHMeKpaNpE",
+      link: "https://twitter.com/karamkaku/status/1461136148923928576",
       embedLink: "https://www.youtube.com/embed/TWHMeKpaNpE",
       repo: "https://github.com/karam-koujan/social-media-app",
       techs:
