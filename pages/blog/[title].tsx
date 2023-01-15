@@ -1,33 +1,13 @@
 import { parseMdFileToObj, getFilesFromDir } from "../../lib/";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Layout from "../../components/common/layout";
 import md from "markdown-it";
 
-const CodeBlock = {
-  code({ node, inline, className, children, ...props }: unknown) {
-    const match = /language-(\w+)/.exec(className || "");
-    return !inline && match ? (
-      <SyntaxHighlighter
-        style={vscDarkPlus}
-        language={match[1]}
-        PreTag="div"
-        {...props}
-      >
-        {String(children).replace(/\n$/, "")}
-      </SyntaxHighlighter>
-    ) : (
-      <code className={className} {...props}>
-        {children}
-      </code>
-    );
-  },
-};
+
 
 interface dataI {
   title: string;
+  date: string;
+  duration:string;
 }
 interface articleI {
   data: dataI;
@@ -37,7 +17,7 @@ interface propsI {
   nav: string[];
   article: articleI;
 }
-const Blog = ({ article, nav }: propsI) => {
+const Blog:NextPage = ({ article, nav }: propsI) => {
   return (
     <Layout nav={nav}>
       <main>
