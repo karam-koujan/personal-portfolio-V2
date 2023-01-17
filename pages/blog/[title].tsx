@@ -1,13 +1,12 @@
 import { parseMdFileToObj, getFilesFromDir } from "../../lib/";
 import Layout from "../../components/common/layout";
 import md from "markdown-it";
-
-
+import Title from "../../components/common/title";
 
 interface dataI {
   title: string;
   date: string;
-  duration:string;
+  duration: string;
 }
 interface articleI {
   data: dataI;
@@ -17,11 +16,11 @@ interface propsI {
   nav: string[];
   article: articleI;
 }
-const Blog:NextPage = ({ article, nav }: propsI) => {
+const Blog: NextPage = ({ article, nav }: propsI) => {
   return (
     <Layout nav={nav}>
-      <main>
-        <h1 className="mx-auto mt-[3rem] mb-[4.5rem] w-fit text-color-primary text-[2.5rem] font-bold dark:text-color-white">
+      <main className="md:px-[1rem]">
+        <h1 className="mx-auto mt-[3rem]  w-fit text-color-primary text-[2.5rem] font-bold dark:text-color-white">
           {article.data.title}
         </h1>
         <div className="mx-auto mb-[1.4rem] text-center text-color-secondary">
@@ -31,7 +30,7 @@ const Blog:NextPage = ({ article, nav }: propsI) => {
         </div>
 
         <article
-          className="m-auto prose prose-xl prose-p:text-color-primary dark:prose-p:text-color-white dark:prose-invert"
+          className="m-auto prose prose-lg prose-p:text-color-primary dark:prose-p:text-color-white dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: md().render(article.content) }}
         ></article>
       </main>

@@ -98,7 +98,7 @@ function RegularFunction() {
   }
   ArrowFunction('c', 'd');
 }
-RegularFunction('a', 'b');  logs { 0: 'a', 1: 'b', length: 2
+RegularFunction('a', 'b');  logs { 0: 'a', 1: 'b', length: 2 }
 ```
 
 
