@@ -1,7 +1,8 @@
+import { NextPage } from "next";
 import { parseMdFileToObj, getFilesFromDir } from "../../lib/";
 import Layout from "../../components/common/layout";
-import md from "markdown-it";
-import Title from "../../components/common/title";
+import Article from "../../components/blog";
+import SEO from "../../components/common/SEO";
 
 interface dataI {
   title: string;
@@ -18,23 +19,12 @@ interface propsI {
 }
 const Blog: NextPage = ({ article, nav }: propsI) => {
   return (
+    <>
+    <SEO title={article.data.title}/>
     <Layout nav={nav}>
-      <main className="md:px-[1rem]">
-        <h1 className="mx-auto mt-[3rem]  w-fit text-color-primary text-[2.5rem] font-bold dark:text-color-white">
-          {article.data.title}
-        </h1>
-        <div className="mx-auto mb-[1.4rem] text-center text-color-secondary">
-          <span>{article.data.date}</span>
-          <span className="mx-[.2rem]">-</span>
-          <span>{article.data.duration} read</span>
-        </div>
-
-        <article
-          className="m-auto prose prose-lg prose-p:text-color-primary dark:prose-p:text-color-white dark:prose-invert"
-          dangerouslySetInnerHTML={{ __html: md().render(article.content) }}
-        ></article>
-      </main>
+    <Article article={article}/>
     </Layout>
+    </>
   );
 };
 

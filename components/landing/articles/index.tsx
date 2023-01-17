@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "../common/button";
+import Button from "../../common/button";
 import {
   ArticleImg,
   ArticleMetaData,
@@ -18,8 +18,8 @@ import {
   ArticleText,
   BtnWrapper
 } from "./styles";
-import { useOnScreen } from "../../hooks";
-import Title from "../common/title/";
+import { useOnScreen } from "../../../hooks";
+import Title from "../../common/title/";
 
 interface articlesI {
   title: string;
@@ -67,7 +67,7 @@ const Articles = ({ articles, blogLink }: propsI) => {
             ) => (
               <Wrapper key={idx}>
                 <Link href={link}>
-                  <a target={link}>
+                  <a>
                     <ArticleImg placeholderColor={placeholder}>
                       <Image
                         layout="responsive"

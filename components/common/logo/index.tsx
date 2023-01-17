@@ -1,5 +1,8 @@
+import Link from "next/link";
 const Logo = () => {
   return (
+    <Link href="/">
+    <a>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -35,6 +38,8 @@ const Logo = () => {
         </g>
       </g>
     </svg>
+    </a>
+    </Link>
   );
 };
 export default Logo;

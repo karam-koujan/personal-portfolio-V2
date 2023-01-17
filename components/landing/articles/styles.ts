@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { fadeInUp } from "../../styles/animation";
+import { fadeInUp } from "../../../styles/animation";
 
 const ArticleTitle = styled.h3`
   font-size: 1.5rem;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useOnScreen } from "../../hooks/";
+import { useOnScreen } from "../../../hooks";
 import {
   Project as ProjectWrapper,
   ProjectImg,
@@ -11,7 +11,7 @@ import {
   Wrapper,
 } from "./styles";
 
-import Title from "../common/title";
+import Title from "../../common/title";
 interface projectI {
   title: string;
   image: string;

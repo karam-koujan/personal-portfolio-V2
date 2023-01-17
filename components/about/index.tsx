@@ -30,7 +30,7 @@ const About = ({ about: { text, skills } }: propsI) => {
       className="px-[2rem] md:px-[1rem] pt-[5rem]  "
       ref={ref}
       tabIndex={0}
-    >
+    > 
       <div className="w-full max-w-6xl mx-auto">
         <Title isVisible={isVisible}>About Me</Title>
         <Wrapper className="md:flex-col md:items-center ">

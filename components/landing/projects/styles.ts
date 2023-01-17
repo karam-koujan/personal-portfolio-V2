@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { fadeInUp } from "../../styles/animation";
+import { fadeInUp } from "../../../styles/animation";
 
 const Project = styled.div`
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px,

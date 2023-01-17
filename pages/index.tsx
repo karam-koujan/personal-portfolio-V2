@@ -3,11 +3,11 @@ import Head from "next/head";
 import { parseMdFileToObj } from "../lib/";
 import SEO from "../components/common/SEO";
 import Layout from "../components/common/layout";
-import Introduction from "../components/introduction";
+import Introduction from "../components/landing/introduction";
 import About from "../components/about";
-import Projects from "../components/projects";
-import Articles from "../components/articles";
-import Contact from "../components/contact";
+import Projects from "../components/landing/projects";
+import Articles from "../components/landing/articles";
+import Contact from "../components/landing/contact";
 interface projectI {
   title: string;
   image: string;
