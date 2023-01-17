@@ -9,7 +9,7 @@ articles:
      placeholder: "#D9C51B",
      duration: 2 min,
      date: 05 june. 2022,
-     link: https://dev.to/karamkoujan/-versus--70e
+     link: /blog/strictEqualVsLooseEqual
     },
     {
       title: Arrow function vs Regular function,
@@ -19,7 +19,7 @@ articles:
       placeholder: "#D9C51B",
       duration: 3 min,
       date: 14 feb. 2022,
-      link: https://dev.to/karamkoujan/arrow-function-vs-regular-function-5c19,
+      link: /blog/ArrowFunctionVsRegularFunction
     },
     {
        title: The Event Loop,
@@ -29,7 +29,7 @@ articles:
       placeholder: "#4b6cc1",
       duration: 2 min,
       date: 15 july. 2022,
-      link: https://dev.to/karamkoujan/the-event-loop-46dj,
+      link: /blog/theEventLoop,
     }
     ,
     {
@@ -40,7 +40,7 @@ articles:
       placeholder: "#D9C51B",
       duration: 2 min,
       date: 28 feb. 2022,
-      link: https://dev.to/karamkoujan/var-vs-let-vs-const-peg,
+      link: /blog/varVsLetVsConst
     },
       {
       title: Infinite scrolling with React,
@@ -50,7 +50,7 @@ articles:
       placeholder: black,
       duration: 3 min,
       date: 2 feb. 2022,
-      link: https://dev.to/karamkoujan/infinite-scrolling-with-react-1kaa,
+      link: /blog/infiniteScrolling
     }
   ]
 blogLink: https://dev.to/karamkoujan
