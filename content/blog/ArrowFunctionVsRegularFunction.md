@@ -1,5 +1,7 @@
 ---
-title : Arrow function vs Regular function 
+title : Arrow function vs Regular function
+image : /assets/images/blog/arrow.png,
+description : "Arrow function and regular function ( function expression) are used interchangeably in our code without knowing the difference between them which could cause some confusing behavior, in this article I will mention 3 important differences between arrow function and regular function."
 duration : 3 min
 date : 14 feb. 2022
 ---

@@ -2,6 +2,8 @@
 title : The Event Loop
 duration : 2 min
 date : 15 july. 2022
+image: /assets/images/blog/eventloop.jpg
+introduction: The event loop model gives javascript the possibility to handle many operations like I/O in a non-blocking way even though it’s a single   threaded language.
 ---
 The event loop model gives javascript the possibility to handle many operations like I/O in a non-blocking way even though it’s a single threaded language.
 

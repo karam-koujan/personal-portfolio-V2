@@ -2,6 +2,8 @@
 title : infinite scrolling with react
 duration : 3 min
 date : 2 february, 2022
+image : /assets/images/blog/infiniteScrolling.jpg
+introduction : "Infinite scrolling is a web-design technique that loads content continuously as the user scrolls down the page, eliminating the need for pagination. This technique is used by social media sites and in this article we are going to learn how to implement infinite scrolling in our apps using React."
 ---
 
 Infinite scrolling is a web-design technique that loads content continuously as the user scrolls down the page, eliminating the need for pagination. This technique is used by social media sites and in this article we are going to learn how to implement infinite scrolling in our apps using React.

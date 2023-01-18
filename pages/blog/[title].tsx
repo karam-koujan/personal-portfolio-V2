@@ -1,26 +1,22 @@
-import { NextPage } from "next";
+import { useRouter } from "next/router";
 import { parseMdFileToObj, getFilesFromDir } from "../../lib/";
+import { propsI } from "../../types/pages/blog/[title]";
 import Layout from "../../components/common/layout";
 import Article from "../../components/blog";
 import SEO from "../../components/common/SEO";
 
-interface dataI {
-  title: string;
-  date: string;
-  duration: string;
-}
-interface articleI {
-  data: dataI;
-  content: string;
-}
-interface propsI {
-  nav: string[];
-  article: articleI;
-}
-const Blog: NextPage = ({ article, nav }: propsI) => {
+
+const Blog = ({ article, nav }: propsI) => {
+  const { asPath } = useRouter();
+    const origin =
+        typeof window !== 'undefined' && window.location.origin
+            ? window.location.origin
+            : '';
+
+    const url= `${origin}${asPath}`;
   return (
     <>
-    <SEO title={article.data.title}/>
+    <SEO title={article.data.title} url={url}  name={article.data.title} image={{src:article.data.image,alt:article.data.title}} description={article.data.introduction}  />
     <Layout nav={nav}>
     <Article article={article}/>
     </Layout>

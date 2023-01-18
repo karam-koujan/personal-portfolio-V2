@@ -3,7 +3,8 @@ import Header from "./header";
 import Footer from "./footer";
 
 interface childrenI{
-	children:React.childNode
+	children:React.ReactNode,
+	nav : string[]
 }
 
 const Layout = ({children,nav}:childrenI)=>{

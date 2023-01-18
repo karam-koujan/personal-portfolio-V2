@@ -6,7 +6,7 @@ interface funcOutI{
         content:any
 }
 
-const parseMdFileToObj = async(filePath:string[]):funcOutI=>{
+const parseMdFileToObj = async(filePath:string[]):Promise<funcOutI>=>{
 
         const mdData = await fs.readFileSync(path.join(process.cwd(),...filePath),{ encoding: 'utf8' });
         const {data,content} = matter(mdData.toString());

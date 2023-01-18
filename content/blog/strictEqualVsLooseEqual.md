@@ -3,6 +3,8 @@ title : == versus ===
 tags : [dev, javascript]
 duration : 2 min
 date : 05 june. 2022
+image : /assets/images/blog/article4.png
+introduction : "There is a very common misconception about the difference between == (loose equals) and === (strict equals) operators, the misconception is: “== checks values for equality and === checks both values and types for equality”. The correct description is “== allows coercion in the equality comparison and === disallows coercion”. === behavior is obvious, so in this article I will focus more on == behavior."
 ---
 
 There is a very common misconception about the difference between == (loose equals) and === (strict equals) operators, the misconception is: “== checks values for equality and === checks both values and types for equality”. The correct description is “== allows coercion in the equality comparison and === disallows coercion”. === behavior is obvious, so in this article I will focus more on == behavior.
