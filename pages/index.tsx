@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { parseMdFileToObj } from "../lib/";
+import { description , url, name } from "../data/config";
+import cardProfileImg from "../public/assets/images/cardProfileImg.jpg";
 import SEO from "../components/common/SEO";
 import Layout from "../components/common/layout";
 import Introduction from "../components/landing/introduction";
@@ -66,7 +68,7 @@ const Home: NextPage = ({
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SEO title="karam koujan | Front end Dev" />
+      <SEO title="karam koujan | Front end Dev"  description={description}  url={url} name={name} image={{src:cardProfileImg.src,alt:"karam's image"}}/>
       <Layout nav={nav}>
         <Introduction introduction={introduction} />
         <About about={about} />
