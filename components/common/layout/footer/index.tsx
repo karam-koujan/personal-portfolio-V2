@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { socialMedia } from "../../../../data/config";
+import { websiteMetaData } from "../../../../data/config";
+import Title from "../../components/common/title";
 import { SocialMediaLinks } from "./styles";
 const Footer = () => {
   return (
     <footer className="mt-[4.5rem] py-[2rem] before:polygoan">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="w-full max-w-6xl mx-auto">
         <div className="hidden xl:flex gap-[2rem] mb-[2rem]  w-fit mx-auto">
-          <Link href={socialMedia.twitter}>
+          <Link href={websiteMetaData.socialMedia.twitter}>
             <a>
               <svg
                 className="fill-color-primary dark:fill-color-white  w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
@@ -19,7 +20,7 @@ const Footer = () => {
               </svg>
             </a>
           </Link>
-          <Link href={socialMedia.linkedIn}>
+          <Link href={websiteMetaData.socialMedia.linkedIn}>
             <a>
               <svg
                 className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
@@ -32,7 +33,7 @@ const Footer = () => {
               </svg>
             </a>
           </Link>
-          <Link href={socialMedia.github}>
+          <Link href={websiteMetaData.socialMedia.github}>
             <a>
               <svg
                 className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
@@ -45,7 +46,7 @@ const Footer = () => {
               </svg>
             </a>
           </Link>
-          <Link href={socialMedia.upwork}>
+          <Link href={websiteMetaData.socialMedia.upwork}>
             <a>
               <svg
                 className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
@@ -58,7 +59,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="flex w-fit mx-auto sm:flex-col sm:items-center ">
+      <div className="flex mx-auto w-fit sm:flex-col sm:items-center ">
         <p className="text-[.9rem]  text-color-primary dark:text-color-white">
           ©&nbsp;karam koujan 2022.
         </p>
@@ -107,7 +108,7 @@ const Footer = () => {
         </p>
       </div>
       <SocialMediaLinks className=" mxl:flex hidden gap-[2rem] w-fit  flex-col fixed pr-[1rem] right-0 bottom-0 ">
-        <Link href={socialMedia.twitter}>
+        <Link href={websiteMetaData.socialMedia.twitter}>
           <a>
             <svg
               className="fill-color-primary dark:fill-color-white  w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
@@ -120,7 +121,7 @@ const Footer = () => {
             </svg>
           </a>
         </Link>
-        <Link href={socialMedia.linkedIn}>
+        <Link href={websiteMetaData.socialMedia.linkedIn}>
           <a>
             <svg
               className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
@@ -133,7 +134,7 @@ const Footer = () => {
             </svg>
           </a>
         </Link>
-        <Link href={socialMedia.github}>
+        <Link href={websiteMetaData.socialMedia.github}>
           <a>
             <svg
               className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
@@ -146,7 +147,7 @@ const Footer = () => {
             </svg>
           </a>
         </Link>
-        <Link href={socialMedia.upwork}>
+        <Link href={websiteMetaData.socialMedia.upwork}>
           <a>
             <svg
               className="fill-color-primary dark:fill-color-white w-[20px] cursor-pointer transform-all ease-in-out duration-500 hover:scale-125 focus:scale-125"
