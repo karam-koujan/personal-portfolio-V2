@@ -2,7 +2,7 @@
 title : Var vs Let vs Const 
 duration: 2 min,
 date: 28 feb. 2022
-image: /assets/images/blog/0-intro.png
+image: https://res.cloudinary.com/practicaldev/image/fetch/s--ffMrrVr8--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f2btk6dkb2h3czfh1802.png
 introduction: "Javascript has 3 keywords to declare a variable, let, const and var. In this article we are going to talk about the similarities and the differences between these keywords."
 ---
 
