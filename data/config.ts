@@ -1,4 +1,4 @@
-module.exports = {
+export const  websiteMetaData =  {
   title: "karam koujan | Front-end Dev",
   logo: "",
   name: "karam koujan",

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Styles from "./styles.module.css";
 import Typewriter from "typewriter-effect";
-import Button from "../common/button";
+import Button from "../../common/button";
 interface introductionI {
   name: string;
   introduction: string;

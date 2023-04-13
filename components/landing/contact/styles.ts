@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { fadeInUp } from "../../styles/animation";
+import { fadeInUp } from "../../../styles/animation";
 const Send = styled.button`
   align-self: center;
   font-size: 1rem;

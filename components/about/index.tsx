@@ -9,7 +9,7 @@ import {
   TechItem,
   Text,
   TextWrapper,
-  Wrapper
+  Wrapper,
 } from "./styles";
 
 interface aboutI {
@@ -22,17 +22,16 @@ interface propsI {
 const About = ({ about: { text, skills } }: propsI) => {
   const [isVisible, ref] = useOnScreen({
     rootMargin: "0px 0px 0px 0px",
-    threshold: 0.5
+    threshold: 0.5,
   });
-
   return (
     <Section
       id="about"
       className="px-[2rem] md:px-[1rem] pt-[5rem]  "
       ref={ref}
       tabIndex={0}
-    >
-      <div className="mx-auto w-full max-w-6xl">
+    > 
+      <div className="w-full max-w-6xl mx-auto">
         <Title isVisible={isVisible}>About Me</Title>
         <Wrapper className="md:flex-col md:items-center ">
           <TextWrapper isVisible={isVisible} className="w-[50%] md:w-full">
@@ -50,7 +49,10 @@ const About = ({ about: { text, skills } }: propsI) => {
               ))}
             </TechList>
           </TextWrapper>
-          <ImgWrapper isVisible={isVisible} className="w-[50%] md:w-full md:h-[500px]">
+          <ImgWrapper
+            isVisible={isVisible}
+            className="w-[50%] md:w-full md:h-[500px]"
+          >
             <Image
               src={profileImg}
               layout="fill"

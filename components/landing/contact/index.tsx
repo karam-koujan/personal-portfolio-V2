@@ -13,9 +13,9 @@ import {
   Text,
   TextArea
 } from "./styles";
-import { useOnScreen } from "../../hooks/";
-import Title from "../common/title";
-import Button from "../common/button";
+import { useOnScreen } from "../../../hooks/";
+import Title from "../../common/title";
+import Button from "../../common/button";
 interface contactSourceI {
   link: string;
   text: string;

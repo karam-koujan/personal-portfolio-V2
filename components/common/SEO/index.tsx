@@ -1,11 +1,13 @@
 import Head from "next/head";
-import { description, url, name } from "../../../data/config";
-import cardProfileImg from "../../../public/assets/images/cardProfileImg.jpg";
 
 interface propsI {
   title: string;
+  image: {src:string,alt:string};
+  description:string;
+  name:string;
+  url:string;
 }
-const SEO = ({ title }: propsI) => {
+const SEO = ({ title , image:{src,alt},description,name,url }: propsI) => {
   return (
     <Head>
       <title>{title}</title>
@@ -17,17 +19,17 @@ const SEO = ({ title }: propsI) => {
       <meta name="og:type" content="website" />
       <meta name="og:title" content={title} />
       <meta name="og:url" content={url} />
-      <meta name="og:image" content={cardProfileImg.src} />
-      <meta name="image" property="og:image" content={cardProfileImg.src} />
-      <meta name="og:image:alt" content="karam koujan's image" />
-      <meta name="og:site_name" content="personal portfolio" />
+      <meta name="og:image" content={src} />
+      <meta name="image" property="og:image" content={src} />
+      <meta name="og:image:alt" content={alt} />
+      <meta name="og:site_name" content={name} />
       <meta name="og:description" content={description} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:type" content="website" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:url" content={url} />
-      <meta name="twitter:image" content={cardProfileImg.src} />
-      <meta name="twitter:image:alt" content="karam koujan's image" />
+      <meta name="twitter:image" content={src} />
+      <meta name="twitter:image:alt" content={alt} />
       <meta name="title" property="og:title" content={title} />
       <meta property="og:type" content="website" />
     </Head>

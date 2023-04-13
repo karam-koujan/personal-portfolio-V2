@@ -1,6 +1,7 @@
-import parseMdFileToObj  from "./parse-md-to-obj.ts"
-
+import parseMdFileToObj  from "./parse-md-to-obj"
+import getFilesFromDir from "./getFilesFromDir"
 
 export {
-parseMdFileToObj
+parseMdFileToObj,
+getFilesFromDir
 }

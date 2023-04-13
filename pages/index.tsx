@@ -1,58 +1,17 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import { parseMdFileToObj } from "../lib/";
+import {websiteMetaData} from "../data/config";
+import {propsI} from "../types/pages";
+import cardProfileImg from "../public/assets/images/cardProfileImg.jpg";
 import SEO from "../components/common/SEO";
 import Layout from "../components/common/layout";
-import Introduction from "../components/introduction";
+import Introduction from "../components/landing/introduction";
 import About from "../components/about";
-import Projects from "../components/projects";
-import Articles from "../components/articles";
-import Contact from "../components/contact";
-interface projectI {
-  title: string;
-  image: string;
-  text: string;
-  placeholder: string;
-  link: string;
-  techs: string[];
-  embedLink: string;
-  repo: string;
-}
-interface articlesI {
-  title: string;
-  image: string;
-  introduction: string;
-  tags: string[];
-  placeholder: string;
-  duration: string;
-  date: string;
-  link: string;
-}
-interface contactSourceI {
-  link: string;
-  text: string;
-  email: string;
-}
-interface contactI {
-  contactSource: contactSourceI;
-  pragraph: string;
-}
-interface introductionI {
-  name: string;
-  introduction: string;
-  resume: string;
-  email: string;
-}
-interface propsI {
-  nav: string[];
-  about: any;
-  projects: projectI[];
-  articles: articlesI[];
-  blogLink: string;
-  contact: contactI;
-  introduction: introductionI;
-}
-const Home: NextPage = ({
+import Projects from "../components/landing/projects";
+import Articles from "../components/landing/articles";
+import Contact from "../components/landing/contact";
+
+const Home = ({
   nav,
   about,
   projects,
@@ -66,7 +25,7 @@ const Home: NextPage = ({
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SEO title="karam koujan | Front end Dev" />
+      <SEO title="karam koujan | Front end Dev"  description={websiteMetaData.description}  url={websiteMetaData.url} name={websiteMetaData.name} image={{src:cardProfileImg.src,alt:"karam's image"}}/>
       <Layout nav={nav}>
         <Introduction introduction={introduction} />
         <About about={about} />
