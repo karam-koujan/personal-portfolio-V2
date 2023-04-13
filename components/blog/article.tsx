@@ -1,4 +1,5 @@
-import { propsI } from "./types";
+import { propsI } from "../../types/components/blog/article";
+
 import md from "markdown-it";
 
 const Article = ({ article }: propsI) => {
@@ -22,4 +23,3 @@ const Article = ({ article }: propsI) => {
 };
 
 export default Article;
-

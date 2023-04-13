@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { parseMdFileToObj, getFilesFromDir } from "../../lib/";
 import { propsI } from "../../types/pages/blog/[title]";
 import Layout from "../../components/common/layout";
-import Article from "../../components/blog";
+import Article from "../../components/blog/article";
 import SEO from "../../components/common/SEO";
 
 

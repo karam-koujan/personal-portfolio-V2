@@ -41,7 +41,7 @@ const ArticleWrapper = styled.div`
   opacity: 0;
   padding: 1rem 0 0rem 0;
   transform: translateY(20%);
-  ${({ isVisible }: { isVisible: string }) =>
+  ${({ isVisible }: { isVisible: boolean }) =>
     isVisible
       ? css`
           animation-delay: 1s;
@@ -119,5 +119,5 @@ export {
   Wrapper,
   Tag,
   TextWrapper,
-  TagWrapper
+  TagWrapper,
 };
