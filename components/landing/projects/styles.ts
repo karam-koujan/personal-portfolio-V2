@@ -18,6 +18,11 @@ const Project = styled.div`
       }
     }
   }
+  @media (max-width: 550px) {
+    & + & {
+      margin-top: 2rem;
+    }
+  }
 `;
 const ProjectLink = styled.a`
   display: block;
@@ -77,6 +82,9 @@ const Wrapper = styled.div`
           animation-timing-function: ease;
         `
       : null}
+  @media(max-width:550px) {
+    display: block;
+  }
 `;
 
 export {
@@ -88,5 +96,5 @@ export {
   TechList,
   TechItem,
   Text,
-  Wrapper
+  Wrapper,
 };

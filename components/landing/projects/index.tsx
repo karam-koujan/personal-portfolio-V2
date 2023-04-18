@@ -33,7 +33,7 @@ const Projects = ({ projects }: propsI) => {
   return (
     <Section
       id="projects"
-      className="px-[2rem] sm:mb-[7rem] md:px-[1rem] pt-[4.5rem]"
+      className="px-[2rem]  md:px-[1rem] pt-[4.5rem]"
       ref={ref}
       tabIndex={0}
     >
