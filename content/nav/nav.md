@@ -1,3 +1,3 @@
 ---
-nav: ["home","about","projects","articles","contact"]
+nav: ["home","about","projects","articles","blog","contact"]
 ---
