@@ -5,8 +5,9 @@ import Layout from "../../components/common/layout";
 import SEO from "../../components/common/SEO";
 import { propsI } from "../../types/pages/blog/";
 import cardProfileImg from "../../public/assets/images/cardProfileImg.jpg";
-import Articles from "../../components/blog/articles";
-const Blogs = ({ articles, nav }: propsI) => {
+import Articles from "../../components/blog/";
+import { articleI } from "../../types/pages/blog/";
+const Blogs = ({ articles, tags, nav }: propsI) => {
   const { asPath } = useRouter();
   return (
     <>
@@ -22,7 +23,7 @@ const Blogs = ({ articles, nav }: propsI) => {
       />
 
       <Layout nav={nav}>
-        <Articles articles={articles} />
+        <Articles articles={articles} tags={tags} />
       </Layout>
     </>
   );
@@ -35,6 +36,16 @@ export async function getStaticProps() {
     "articles",
     "articles.md",
   ]);
-  return { props: { articles: articles.data.articles, nav: navData.data.nav } };
+  let tags = articles.data.articles
+    .map((article: articleI) => article.tags)
+    .flat();
+  let tagsObj: { [key: string]: undefined } = {};
+  tags.forEach((tag: string) => {
+    tagsObj[tag] = undefined;
+  });
+  tags = Object.keys(tagsObj);
+  return {
+    props: { articles: articles.data.articles, tags, nav: navData.data.nav },
+  };
 }
 export default Blogs;

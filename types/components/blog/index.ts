@@ -10,4 +10,5 @@ export interface articleI {
 }
 export interface propsI {
   articles: articleI[];
+  tags:string[]
 }

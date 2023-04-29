@@ -11,4 +11,5 @@ export interface articleI {
 export interface propsI {
   nav: string[];
   articles: articleI[];
+  tags: string[];
 }
