@@ -97,7 +97,7 @@ const Articles = ({ articles, tags }: propsI) => {
                           <ArticleText className="text-color-primary dark:text-color-white my-[1rem] overflow-hidden">
                             {introduction}
                           </ArticleText>
-                          <ArticleMetaData className="bg-color-white">
+                          <ArticleMetaData className="bg-color-white dark:bg-color-primary">
                             <TagWrapper>
                               {tags.map((tag, idx) => (
                                 <Tag
