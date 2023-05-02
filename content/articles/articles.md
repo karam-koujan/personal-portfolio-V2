@@ -53,5 +53,5 @@ articles:
       link: /blog/infiniteScrolling
     }
   ]
-blogLink: https://dev.to/karamkoujan
+blogLink: /blog
 ---

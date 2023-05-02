@@ -5,9 +5,7 @@ import Button from "../../common/button";
 import {
   ArticleImg,
   ArticleMetaData,
-  ArticleWrapper,
   TextWrapper,
-  Wrapper,
   Tag,
   TagWrapper,
   Date,
@@ -15,7 +13,7 @@ import {
   ArticleTitle,
   ArticleText,
 } from "../../common/articles/styles";
-import { Section, BtnWrapper } from "./styles";
+import { Section, BtnWrapper,Wrapper,ArticleWrapper} from "./styles";
 import { useOnScreen } from "../../../hooks";
 import Title from "../../common/title/";
 
@@ -48,7 +46,7 @@ const Articles = ({ articles, blogLink }: propsI) => {
     >
       <div className="mx-auto w-full max-w-6xl">
         <Title isVisible={isVisible}>Articles</Title>
-        <ArticleWrapper isVisible={isVisible} className="gap-[5%] sm:gap-[2%]">
+        <ArticleWrapper isVisible={isVisible}>
           {articles
             .slice(0, 3)
             .map(
@@ -107,17 +105,17 @@ const Articles = ({ articles, blogLink }: propsI) => {
                   </Link>
                 </Wrapper>
               )
-            )}
+              )}
         </ArticleWrapper>
-        {false ? (
-          <BtnWrapper className="mt-[2rem]">
-            <Link href={blogLink} target={blogLink}>
-              <a>
-                <Button>see more</Button>
-              </a>
-            </Link>
-          </BtnWrapper>
-        ) : null}
+              {true ? (
+                <BtnWrapper className="mt-[2rem]">
+                  <Link href={blogLink} target={blogLink}>
+                    <a>
+                      <Button>see more</Button>
+                    </a>
+                  </Link>
+                </BtnWrapper>
+              ) : null}
       </div>
     </Section>
   );

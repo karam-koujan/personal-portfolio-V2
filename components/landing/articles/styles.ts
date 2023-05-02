@@ -7,6 +7,30 @@ const ArticleTitle = styled.h3`
 const ArticleText = styled.p`
   line-height: 22px;
 `;
+const ArticleWrapper = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+  opacity: 0;
+  padding: 1rem 0 0rem 0;
+  transform: translateY(20%);
+  ${({ isVisible }: { isVisible: boolean }) =>
+    isVisible
+      ? css`
+          animation-delay: 1s;
+          animation-duration: 0.6s;
+          animation-fill-mode: forwards;
+          animation-name: ${fadeInUp};
+          animation-timing-function: ease;
+        `
+      : null}
+      @media (max-width:512px){
+        &{
+          display:block;
+        }
+      }
+    
+`;
 const BtnWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -35,26 +59,12 @@ const ArticleImg = styled.div`
   cursor: pointer;
   width: 100%;
 `;
-const ArticleWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  opacity: 0;
-  padding: 1rem 0 0rem 0;
-  transform: translateY(20%);
-  ${({ isVisible }: { isVisible: boolean }) =>
-    isVisible
-      ? css`
-          animation-delay: 1s;
-          animation-duration: 0.6s;
-          animation-fill-mode: forwards;
-          animation-name: ${fadeInUp};
-          animation-timing-function: ease;
-        `
-      : null}
-`;
+
 
 const Section = styled.section``;
 const Wrapper = styled.div`
+width: calc(33.33% - 10px);
+margin-bottom: 20px;
  border-top-left-radius:8px;
  border-top-right-radius:8px;
  box-shadow:rgba(0, 0, 0, 0.2) 0px 1px 5px 0px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
@@ -71,8 +81,17 @@ const Wrapper = styled.div`
   
 }
  }
+ @media (max-width: 768px) {
+  &{
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width:512px){
+  &{
+    width:100%;
+  }
+}`
 
-    `;
 const TagWrapper = styled.div`
   display: flex;
   gap: 1rem;

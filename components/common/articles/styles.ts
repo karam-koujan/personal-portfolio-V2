@@ -35,6 +35,7 @@ const ArticleImg = styled.div`
   cursor: pointer;
   width: 100%;
 `;
+
 const ArticleWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
@@ -52,7 +53,6 @@ const ArticleWrapper = styled.div`
         `
       : null}
 `;
-
 const Section = styled.section``;
 const Wrapper = styled.div`
  border-top-left-radius:8px;
