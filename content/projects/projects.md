@@ -62,13 +62,13 @@ projects:
         ["MongoDb", "Express", "React.js", "Styled-components", "React-query"],
     },
     {
-      title: Freelancers Reviews Maps,
+      title: TalentNearby,
       image: "/assets/images/sideProject.jpg",
-      link: "https://youtu.be/9Wu4l-Due4I",
+      link: "https://twitter.com/karamkaku/status/1675284101861916673",
       embedLink: "https://www.youtube.com/embed/9Wu4l-Due4I",
       text: "Find talented freelancers nearby you ",
       placeholder: "#19BD33",
-      repo: "https://github.com/karam-koujan/side-project",
+      repo: "https://github.com/karam-koujan/TalentNearby",
       techs:
         ["MongoDb", "Express", "React.js", "Styled-components", "React-query"],
     }
