@@ -35,7 +35,7 @@ projects:
       link: "https://twitter.com/karamkaku/status/1666900099333513236",
       embedLink: "https://twitter.com/karamkaku/status/1666900099333513236",
       repo: "https://github.com/karam-koujan/NotionSave",
-      text: "An extension That help you save your social media posts in your notion database",
+      text: "An extension that saves social media posts to Notion.",
       placeholder: "#4b6cc1",
       techs:
         [
