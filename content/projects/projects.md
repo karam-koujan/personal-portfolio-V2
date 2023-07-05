@@ -28,6 +28,19 @@ projects:
           "Tailwind css",
           "styled components",
         ],
+    },
+     {
+      title: "NotionSave",
+      image: "/assets/images/NotionSave.jpg",
+      link: "https://twitter.com/karamkaku/status/1666900099333513236",
+      embedLink: "https://twitter.com/karamkaku/status/1666900099333513236",
+      repo: "https://github.com/karam-koujan/NotionSave,
+      text: "An extension That help you save your social media posts in your notion database",
+      placeholder: "#4b6cc1",
+      techs:
+        [
+        "Javascript"
+        ],
     }
     ,
      {
