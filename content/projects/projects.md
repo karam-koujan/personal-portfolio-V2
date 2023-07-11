@@ -32,8 +32,8 @@ projects:
      {
       title: "NotionSave",
       image: "/assets/images/NotionSave.jpg",
-      link: "https://twitter.com/karamkaku/status/1666900099333513236",
-      embedLink: "https://twitter.com/karamkaku/status/1666900099333513236",
+      link: "https://twitter.com/karamkaku/status/1678557623224811521",
+      embedLink: "https://twitter.com/karamkaku/status/1678557623224811521",
       repo: "https://github.com/karam-koujan/NotionSave",
       text: "An extension that saves social media posts to Notion.",
       placeholder: "#4b6cc1",
